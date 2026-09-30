@@ -47,7 +47,7 @@ en:{
       {l:"Villamartín golf course",v:"2.1 km · 5 min drive"},{l:"Zenia Boulevard shopping & dining",v:"4 km · 10 min drive"}
     ],
     parkingNote:"Most families drive to the beach rather than walk — every beach car park on the Orihuela Costa, including Cabo Roig and La Zenia, is free of charge.",
-    mapTitle:"Route to the beach",mapCta:"Open in Google Maps",mapDistance:"1.6 km · 5 min drive",mapHere:"You are here",
+    mapTitle:"Route to the beach",mapCta:"Open in Google Maps",mapDistance:"1.6 km · 5 min drive",mapHere:"You are here",moreBeachesTitle:"More coves nearby",
     beachesTitle:"Nearby beaches",beachesSub:"Every beach within easy reach of the apartment — tap a pin or a card for directions.",
     beachesImportant:"Beach parking is free everywhere on this stretch of coast — except in Torrevieja, where beach car parks charge a fee.",
     airportsTitle:"Nearest airports",
@@ -62,14 +62,14 @@ en:{
     restaurantsSub:"A handful of well-regarded restaurants within a short drive, from an Argentinian grill to beachfront seafood.",
     restaurantsCta:"More info",
     restaurants:[
-      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"A big Argentinian grill buffet — meat carved and grilled at your table, inside the Zenia Boulevard mall.",photo:"che",url:"http://www.cherestaurant.es/"},
-      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"A grill bar in the Lomas de Cabo Roig neighbourhood serving char-grilled steaks and Mediterranean sharing plates — grilled octopus and artichokes among them.",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
-      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · beachfront",desc:"Mediterranean seafood, tapas and paellas right on the Cabo Roig seafront — walking distance from the apartment.",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
-      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"A relaxed, family-run café-bar with a heated terrace and a kids' play area — good for an easy breakfast, coffee or casual meal away from the tourist strip.",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
-      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"An international bar-restaurant near Cabo Roig with a relaxed, lounge-style dining room — the tables are set with a Mexican, Italian and steakhouse menu.",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
-      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"A traditional Spanish spot near Cabo Roig for classic pescaíto frito — battered squid, anchovies and fresh fish — alongside seafood platters and cold drinks.",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
-      {name:"Aberdinangus Argentinian Restaurant",place:"Calle Cielo 10, Cabo Roig",desc:"An Argentinian steakhouse in Cabo Roig grilling prime cuts of beef with roasted potatoes — reservations recommended by phone or WhatsApp.",photo:"aberdinangus",url:"https://aberdinangus.com/"},
-      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"An Asian-fusion restaurant in Mil Palmeras pairing fresh sushi rolls and nigiri with grilled seafood platters — prawns, razor clams and fish straight off the grill.",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
+      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"A big Argentinian grill buffet — meat carved and grilled at your table, inside the Zenia Boulevard mall.",drive:"6 min",photo:"che",url:"http://www.cherestaurant.es/"},
+      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"A grill bar in the Lomas de Cabo Roig neighbourhood serving char-grilled steaks and Mediterranean sharing plates — grilled octopus and artichokes among them.",drive:"5 min",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
+      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · beachfront",desc:"Mediterranean seafood, tapas and paellas right on the Cabo Roig seafront — walking distance from the apartment.",drive:"Walking distance",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
+      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"A relaxed, family-run café-bar with a heated terrace and a kids' play area — good for an easy breakfast, coffee or casual meal away from the tourist strip.",drive:"12 min",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
+      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"An international bar-restaurant near Cabo Roig with a relaxed, lounge-style dining room — the tables are set with a Mexican, Italian and steakhouse menu.",drive:"5 min",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
+      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"A traditional Spanish spot near Cabo Roig for classic pescaíto frito — battered squid, anchovies and fresh fish — alongside seafood platters and cold drinks.",drive:"5 min",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
+      {name:"Aberdinangus Argentinian Restaurant",place:"Calle Cielo 10, Cabo Roig",desc:"An Argentinian steakhouse in Cabo Roig grilling prime cuts of beef with roasted potatoes — reservations recommended by phone or WhatsApp.",drive:"3 min",photo:"aberdinangus",url:"https://aberdinangus.com/"},
+      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"An Asian-fusion restaurant in Mil Palmeras pairing fresh sushi rolls and nigiri with grilled seafood platters — prawns, razor clams and fish straight off the grill.",drive:"15 min",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
     ],
     galleryCta:"See photos of the apartment",bookCta:"Check availability"},
   galleryPage:{eyebrow:"Gallery",title:"Casa de Don Simón, in pictures",sub:"A look at the apartment's bedrooms, living space, kitchen, terrace and community pool.",comingSoon:"New photos of the apartment are on their way — check back soon.",
@@ -121,8 +121,15 @@ en:{
     wineNote:"Visits are by appointment only — contact the winery ahead to arrange a tour and tasting.",
     wineCta:"Visit website",wineUrl:"http://www.vinosladama.com/",
     foodTitle:"A taste of the coast",
-    foodDesc:"Paella and fresh seafood cooked outdoors are a fixture of local fiestas and market days — worth timing a visit around if you see one advertised."},
-  common:{lang:"Language",readMore:"Details",backTop:"Back to top",close:"Close",photo:"Photo",directions:"Directions",website:"Website",musicOn:"Play background music",musicOff:"Pause background music",routeMap:"Route map",parkingFree:"Free parking",parkingPaid:"Paid parking"}
+    foodDesc:"Paella and fresh seafood cooked outdoors are a fixture of local fiestas and market days — worth timing a visit around if you see one advertised.",
+    infoTitle:"Practical information",infoSub:"A couple of useful links for planning your stay and getting around.",
+    weatherTitle:"Live weather forecast",
+    weatherDesc:"An interactive weather map centred on Cabo Roig — check the forecast, wind and rain before you head to the beach.",
+    weatherCta:"Check the weather",weatherUrl:"https://meteo365.es/?37.91,-0.73,10&temp,icon&lvl=2m",
+    drivingTitle:"Driving in Spain",
+    drivingDesc:"Planning to rent a car? This English-language portal covers Spanish traffic rules and driving news for foreign residents and visitors along the Costa Blanca.",
+    drivingCta:"Visit n332.es",drivingUrl:"https://n332.es/"},
+  common:{lang:"Language",readMore:"Details",backTop:"Back to top",close:"Close",photo:"Photo",directions:"Directions",website:"Website",musicOn:"Play background music",musicOff:"Pause background music",routeMap:"Route map",parkingFree:"Free parking",parkingPaid:"Paid parking",notOnMap:"A little further, just outside this map's frame:"}
 },
 es:{
   nav:{home:"Inicio",apartment:"El apartamento",attractions:"Atracciones",local:"Vida local",gallery:"Galería",contact:"Zona de clientes"},
@@ -156,7 +163,7 @@ es:{
       {l:"Campo de golf Villamartín",v:"2,1 km · 5 min en coche"},{l:"Zenia Boulevard (tiendas y restaurantes)",v:"4 km · 10 min en coche"}
     ],
     parkingNote:"La mayoría de las familias van en coche a la playa en vez de andando — todos los aparcamientos de playa de la Orihuela Costa, incluidos Cabo Roig y La Zenia, son gratuitos.",
-    mapTitle:"Ruta a la playa",mapCta:"Abrir en Google Maps",mapDistance:"1,6 km · 5 min en coche",mapHere:"Estás aquí",
+    mapTitle:"Ruta a la playa",mapCta:"Abrir en Google Maps",mapDistance:"1,6 km · 5 min en coche",mapHere:"Estás aquí",moreBeachesTitle:"Más calas cerca",
     beachesTitle:"Playas cercanas",beachesSub:"Todas las playas a un corto trayecto del apartamento — toca un pin o una tarjeta para ver cómo llegar.",
     beachesImportant:"El aparcamiento en la playa es gratuito en todo este tramo de costa, excepto en Torrevieja, donde los aparcamientos de playa son de pago.",
     airportsTitle:"Aeropuertos más cercanos",
@@ -171,14 +178,14 @@ es:{
     restaurantsSub:"Un puñado de restaurantes bien valorados a poca distancia en coche, desde una parrilla argentina hasta marisco frente al mar.",
     restaurantsCta:"Más información",
     restaurants:[
-      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Un gran bufé de parrilla argentina — la carne se trincha y se asa en tu propia mesa, dentro del centro comercial Zenia Boulevard.",photo:"che",url:"http://www.cherestaurant.es/"},
-      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Un grill bar en la urbanización Lomas de Cabo Roig con carnes a la brasa y platos mediterráneos para compartir, entre ellos pulpo y alcachofas a la parrilla.",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
-      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · primera línea de playa",desc:"Marisco mediterráneo, tapas y paellas justo en el paseo marítimo de Cabo Roig — a poca distancia a pie del apartamento.",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
-      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Una cafetería-bar familiar y tranquila, con terraza climatizada y zona infantil — ideal para un desayuno, un café o una comida informal lejos del circuito turístico.",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
-      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Un bar-restaurante internacional cerca de Cabo Roig con un ambiente relajado tipo lounge — las mesas ofrecen una carta mexicana, italiana y de steakhouse.",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
-      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Un local español tradicional cerca de Cabo Roig para un buen pescaíto frito — calamares, boquerones y pescado fresco rebozado — además de mariscadas y bebidas frías.",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
-      {name:"Aberdinangus Restaurante Argentino",place:"Calle Cielo 10, Cabo Roig",desc:"Un asador argentino en Cabo Roig con cortes de carne a la parrilla y patatas asadas — se recomienda reservar por teléfono o WhatsApp.",photo:"aberdinangus",url:"https://aberdinangus.com/"},
-      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Un restaurante de fusión asiática en Mil Palmeras que combina sushi y nigiri frescos con mariscadas a la parrilla — langostinos, navajas y pescado recién hecho.",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
+      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Un gran bufé de parrilla argentina — la carne se trincha y se asa en tu propia mesa, dentro del centro comercial Zenia Boulevard.",drive:"6 min",photo:"che",url:"http://www.cherestaurant.es/"},
+      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Un grill bar en la urbanización Lomas de Cabo Roig con carnes a la brasa y platos mediterráneos para compartir, entre ellos pulpo y alcachofas a la parrilla.",drive:"5 min",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
+      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · primera línea de playa",desc:"Marisco mediterráneo, tapas y paellas justo en el paseo marítimo de Cabo Roig — a poca distancia a pie del apartamento.",drive:"A pie",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
+      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Una cafetería-bar familiar y tranquila, con terraza climatizada y zona infantil — ideal para un desayuno, un café o una comida informal lejos del circuito turístico.",drive:"12 min",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
+      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Un bar-restaurante internacional cerca de Cabo Roig con un ambiente relajado tipo lounge — las mesas ofrecen una carta mexicana, italiana y de steakhouse.",drive:"5 min",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
+      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Un local español tradicional cerca de Cabo Roig para un buen pescaíto frito — calamares, boquerones y pescado fresco rebozado — además de mariscadas y bebidas frías.",drive:"5 min",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
+      {name:"Aberdinangus Restaurante Argentino",place:"Calle Cielo 10, Cabo Roig",desc:"Un asador argentino en Cabo Roig con cortes de carne a la parrilla y patatas asadas — se recomienda reservar por teléfono o WhatsApp.",drive:"3 min",photo:"aberdinangus",url:"https://aberdinangus.com/"},
+      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Un restaurante de fusión asiática en Mil Palmeras que combina sushi y nigiri frescos con mariscadas a la parrilla — langostinos, navajas y pescado recién hecho.",drive:"15 min",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
     ],
     galleryCta:"Ver fotos del apartamento",bookCta:"Consultar disponibilidad"},
   galleryPage:{eyebrow:"Galería",title:"Casa de Don Simón, en imágenes",sub:"Un vistazo a los dormitorios, el salón, la cocina, la terraza y la piscina comunitaria del apartamento.",comingSoon:"Las nuevas fotos del apartamento están en camino — vuelve pronto.",
@@ -230,8 +237,15 @@ es:{
     wineNote:"Las visitas son solo con cita previa — contacta con la bodega para concertar la visita y la cata.",
     wineCta:"Ver web",wineUrl:"http://www.vinosladama.com/",
     foodTitle:"Un sabor de la costa",
-    foodDesc:"La paella y el marisco fresco cocinados al aire libre son habituales en las fiestas locales y los días de mercadillo — vale la pena organizar una visita en torno a ellos si ves alguno anunciado."},
-  common:{lang:"Idioma",readMore:"Detalles",backTop:"Volver arriba",close:"Cerrar",photo:"Foto",directions:"Cómo llegar",website:"Sitio web",musicOn:"Reproducir música de fondo",musicOff:"Pausar música de fondo",routeMap:"Ver mapa de ruta",parkingFree:"Aparcamiento gratuito",parkingPaid:"Aparcamiento de pago"}
+    foodDesc:"La paella y el marisco fresco cocinados al aire libre son habituales en las fiestas locales y los días de mercadillo — vale la pena organizar una visita en torno a ellos si ves alguno anunciado.",
+    infoTitle:"Información práctica",infoSub:"Un par de enlaces útiles para planificar tu estancia y moverte por la zona.",
+    weatherTitle:"Previsión meteorológica en directo",
+    weatherDesc:"Un mapa meteorológico interactivo centrado en Cabo Roig — consulta la previsión, el viento y la lluvia antes de ir a la playa.",
+    weatherCta:"Ver el tiempo",weatherUrl:"https://meteo365.es/?37.91,-0.73,10&temp,icon&lvl=2m",
+    drivingTitle:"Conducir en España",
+    drivingDesc:"¿Piensas alquilar un coche? Este portal en inglés recoge las normas de tráfico españolas y noticias sobre conducción para residentes extranjeros y visitantes en la Costa Blanca.",
+    drivingCta:"Visitar n332.es",drivingUrl:"https://n332.es/"},
+  common:{lang:"Idioma",readMore:"Detalles",backTop:"Volver arriba",close:"Cerrar",photo:"Foto",directions:"Cómo llegar",website:"Sitio web",musicOn:"Reproducir música de fondo",musicOff:"Pausar música de fondo",routeMap:"Ver mapa de ruta",parkingFree:"Aparcamiento gratuito",parkingPaid:"Aparcamiento de pago",notOnMap:"Un poco más lejos, justo fuera del encuadre de este mapa:"}
 },
 pl:{
   nav:{home:"Start",apartment:"Apartament",attractions:"Atrakcje",local:"Życie lokalne",gallery:"Galeria",contact:"Strefa klienta"},
@@ -265,7 +279,7 @@ pl:{
       {l:"Pole golfowe Villamartín",v:"2,1 km · 5 min samochodem"},{l:"Centrum Zenia Boulevard (sklepy i restauracje)",v:"4 km · 10 min samochodem"}
     ],
     parkingNote:"Większość rodzin jeździ na plażę samochodem, a nie pieszo — wszystkie parkingi przy plażach na Orihuela Costa, w tym w Cabo Roig i La Zenia, są bezpłatne.",
-    mapTitle:"Trasa na plażę",mapCta:"Otwórz w Google Maps",mapDistance:"1,6 km · 5 min samochodem",mapHere:"Tu jesteś",
+    mapTitle:"Trasa na plażę",mapCta:"Otwórz w Google Maps",mapDistance:"1,6 km · 5 min samochodem",mapHere:"Tu jesteś",moreBeachesTitle:"Więcej zatoczek w pobliżu",
     beachesTitle:"Pobliskie plaże",beachesSub:"Wszystkie plaże w zasięgu krótkiego dojazdu od apartamentu — kliknij pinezkę lub kartę, aby zobaczyć trasę dojazdu.",
     beachesImportant:"Parking przy plaży jest bezpłatny na całym tym odcinku wybrzeża — z wyjątkiem Torrevieja, gdzie parkingi przy plaży są płatne.",
     airportsTitle:"Najbliższe lotniska",
@@ -280,14 +294,14 @@ pl:{
     restaurantsSub:"Kilka cenionych restauracji w niedalekiej odległości — od argentyńskiego grilla po owoce morza tuż nad plażą.",
     restaurantsCta:"Więcej informacji",
     restaurants:[
-      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Duży bufet z argentyńskim grillem — mięso krojone i grillowane przy stoliku, w centrum handlowym Zenia Boulevard.",photo:"che",url:"http://www.cherestaurant.es/"},
-      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Grill bar w dzielnicy Lomas de Cabo Roig, serwujący steki z grilla i śródziemnomorskie dania do dzielenia się — w tym grillowaną ośmiornicę i karczochy.",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
-      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · pierwsza linia plaży",desc:"Śródziemnomorskie owoce morza, tapas i paelle tuż przy promenadzie w Cabo Roig — spacerkiem od apartamentu.",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
-      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Kameralna, rodzinna kawiarnia-bar z ogrzewanym tarasem i kącikiem dla dzieci — dobre miejsce na spokojne śniadanie, kawę lub swobodny posiłek z dala od turystycznego zgiełku.",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
-      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Międzynarodowy bar-restauracja niedaleko Cabo Roig w klimacie loungowym — w karcie dania kuchni meksykańskiej, włoskiej i steakhouse.",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
-      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Tradycyjny hiszpański lokal niedaleko Cabo Roig na klasyczne pescaíto frito — smażone kalmary, sardele i świeżą rybę w cieście — oraz talerze owoców morza i zimne napoje.",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
-      {name:"Aberdinangus Restauracja Argentyńska",place:"Calle Cielo 10, Cabo Roig",desc:"Argentyńska grillownia w Cabo Roig serwująca wołowinę z grilla z pieczonymi ziemniakami — rezerwacja zalecana telefonicznie lub przez WhatsApp.",photo:"aberdinangus",url:"https://aberdinangus.com/"},
-      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Restauracja fusion kuchni azjatyckiej w Mil Palmeras, łącząca świeże sushi i nigiri z grillowanymi owocami morza — krewetkami, przegrzebkami i rybą prosto z grilla.",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
+      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Duży bufet z argentyńskim grillem — mięso krojone i grillowane przy stoliku, w centrum handlowym Zenia Boulevard.",drive:"6 min",photo:"che",url:"http://www.cherestaurant.es/"},
+      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Grill bar w dzielnicy Lomas de Cabo Roig, serwujący steki z grilla i śródziemnomorskie dania do dzielenia się — w tym grillowaną ośmiornicę i karczochy.",drive:"5 min",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
+      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · pierwsza linia plaży",desc:"Śródziemnomorskie owoce morza, tapas i paelle tuż przy promenadzie w Cabo Roig — spacerkiem od apartamentu.",drive:"Spacerkiem",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
+      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Kameralna, rodzinna kawiarnia-bar z ogrzewanym tarasem i kącikiem dla dzieci — dobre miejsce na spokojne śniadanie, kawę lub swobodny posiłek z dala od turystycznego zgiełku.",drive:"12 min",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
+      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Międzynarodowy bar-restauracja niedaleko Cabo Roig w klimacie loungowym — w karcie dania kuchni meksykańskiej, włoskiej i steakhouse.",drive:"5 min",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
+      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Tradycyjny hiszpański lokal niedaleko Cabo Roig na klasyczne pescaíto frito — smażone kalmary, sardele i świeżą rybę w cieście — oraz talerze owoców morza i zimne napoje.",drive:"5 min",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
+      {name:"Aberdinangus Restauracja Argentyńska",place:"Calle Cielo 10, Cabo Roig",desc:"Argentyńska grillownia w Cabo Roig serwująca wołowinę z grilla z pieczonymi ziemniakami — rezerwacja zalecana telefonicznie lub przez WhatsApp.",drive:"3 min",photo:"aberdinangus",url:"https://aberdinangus.com/"},
+      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Restauracja fusion kuchni azjatyckiej w Mil Palmeras, łącząca świeże sushi i nigiri z grillowanymi owocami morza — krewetkami, przegrzebkami i rybą prosto z grilla.",drive:"15 min",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
     ],
     galleryCta:"Zobacz zdjęcia apartamentu",bookCta:"Sprawdź dostępność"},
   galleryPage:{eyebrow:"Galeria",title:"Casa de Don Simón na zdjęciach",sub:"Spojrzenie na sypialnie, salon, kuchnię, taras i basen wspólny apartamentu.",comingSoon:"Nowe zdjęcia apartamentu wkrótce się pojawią — zajrzyj tu ponownie.",
@@ -339,8 +353,15 @@ pl:{
     wineNote:"Wizyty tylko po wcześniejszym umówieniu — skontaktuj się z winnicą, aby ustalić termin zwiedzania i degustacji.",
     wineCta:"Zobacz stronę",wineUrl:"http://www.vinosladama.com/",
     foodTitle:"Smak wybrzeża",
-    foodDesc:"Paella i świeże owoce morza gotowane na świeżym powietrzu to stały punkt lokalnych fiest i dni targowych — warto zaplanować wizytę wokół takiego wydarzenia, jeśli akurat się odbywa."},
-  common:{lang:"Język",readMore:"Szczegóły",backTop:"Do góry",close:"Zamknij",photo:"Zdjęcie",directions:"Trasa dojazdu",website:"Strona",musicOn:"Włącz muzykę w tle",musicOff:"Wyłącz muzykę w tle",routeMap:"Mapa trasy",parkingFree:"Bezpłatny parking",parkingPaid:"Płatny parking"}
+    foodDesc:"Paella i świeże owoce morza gotowane na świeżym powietrzu to stały punkt lokalnych fiest i dni targowych — warto zaplanować wizytę wokół takiego wydarzenia, jeśli akurat się odbywa.",
+    infoTitle:"Informacje praktyczne",infoSub:"Kilka przydatnych linków do planowania pobytu i poruszania się po okolicy.",
+    weatherTitle:"Pogoda na żywo",
+    weatherDesc:"Interaktywna mapa pogodowa wyśrodkowana na Cabo Roig — sprawdź prognozę, wiatr i opady, zanim wybierzesz się na plażę.",
+    weatherCta:"Sprawdź pogodę",weatherUrl:"https://meteo365.es/?37.91,-0.73,10&temp,icon&lvl=2m",
+    drivingTitle:"Prowadzenie samochodu w Hiszpanii",
+    drivingDesc:"Planujesz wynająć samochód? Ten anglojęzyczny portal publikuje hiszpańskie przepisy drogowe i wiadomości motoryzacyjne dla zagranicznych mieszkańców i turystów na Costa Blanca.",
+    drivingCta:"Odwiedź n332.es",drivingUrl:"https://n332.es/"},
+  common:{lang:"Język",readMore:"Szczegóły",backTop:"Do góry",close:"Zamknij",photo:"Zdjęcie",directions:"Trasa dojazdu",website:"Strona",musicOn:"Włącz muzykę w tle",musicOff:"Wyłącz muzykę w tle",routeMap:"Mapa trasy",parkingFree:"Bezpłatny parking",parkingPaid:"Płatny parking",notOnMap:"Nieco dalej, tuż poza kadrem tej mapy:"}
 },
 de:{
   nav:{home:"Start",apartment:"Die Wohnung",attractions:"Ausflugsziele",local:"Leben vor Ort",gallery:"Galerie",contact:"Kundenbereich"},
@@ -374,7 +395,7 @@ de:{
       {l:"Golfplatz Villamartín",v:"2,1 km · 5 Min. mit dem Auto"},{l:"Zenia Boulevard (Shopping & Gastronomie)",v:"4 km · 10 Min. mit dem Auto"}
     ],
     parkingNote:"Die meisten Familien fahren mit dem Auto zum Strand statt zu Fuß zu gehen — alle Strandparkplätze an der Orihuela Costa, auch in Cabo Roig und La Zenia, sind kostenlos.",
-    mapTitle:"Route zum Strand",mapCta:"In Google Maps öffnen",mapDistance:"1,6 km · 5 Min. mit dem Auto",mapHere:"Hier befindet ihr euch",
+    mapTitle:"Route zum Strand",mapCta:"In Google Maps öffnen",mapDistance:"1,6 km · 5 Min. mit dem Auto",mapHere:"Hier befindet ihr euch",moreBeachesTitle:"Weitere Buchten in der Nähe",
     beachesTitle:"Strände in der Nähe",beachesSub:"Alle Strände in bequemer Reichweite der Wohnung — tippen Sie auf eine Markierung oder Karte für die Route.",
     beachesImportant:"Das Parken am Strand ist entlang dieses Küstenabschnitts überall kostenlos — außer in Torrevieja, wo die Strandparkplätze kostenpflichtig sind.",
     airportsTitle:"Nächstgelegene Flughäfen",
@@ -389,14 +410,14 @@ de:{
     restaurantsSub:"Ein paar gut bewertete Restaurants in kurzer Fahrentfernung — vom argentinischen Grill bis zu Meeresfrüchten direkt am Strand.",
     restaurantsCta:"Mehr Infos",
     restaurants:[
-      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Ein großes argentinisches Grillbuffet — Fleisch wird direkt am Tisch tranchiert und gegrillt, im Einkaufszentrum Zenia Boulevard.",photo:"che",url:"http://www.cherestaurant.es/"},
-      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Eine Grillbar im Viertel Lomas de Cabo Roig mit gegrillten Steaks und mediterranen Teilergerichten — darunter gegrillter Oktopus und Artischocken.",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
-      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · direkt am Strand",desc:"Mediterrane Meeresfrüchte, Tapas und Paellas direkt an der Strandpromenade von Cabo Roig — fußläufig von der Wohnung.",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
-      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Eine entspannte, familiengeführte Cafetería-Bar mit beheizter Terrasse und Kinderspielecke — gut für ein einfaches Frühstück, einen Kaffee oder ein zwangloses Essen abseits des Touristentrubels.",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
-      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Eine internationale Bar-Restaurant nahe Cabo Roig mit entspanntem Lounge-Ambiente — auf der Karte stehen mexikanische, italienische und Steakhouse-Gerichte.",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
-      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Ein traditionelles spanisches Lokal nahe Cabo Roig für klassisches pescaíto frito — frittierte Calamares, Sardellen und Fisch im Teigmantel — sowie Meeresfrüchteplatten und kalte Getränke.",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
-      {name:"Aberdinangus Argentinisches Restaurant",place:"Calle Cielo 10, Cabo Roig",desc:"Ein argentinisches Steakhouse in Cabo Roig mit gegrilltem Rindfleisch und Röstkartoffeln — Reservierung per Telefon oder WhatsApp empfohlen.",photo:"aberdinangus",url:"https://aberdinangus.com/"},
-      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Ein asiatisches Fusion-Restaurant in Mil Palmeras, das frisches Sushi und Nigiri mit gegrillten Meeresfrüchteplatten kombiniert — Garnelen, Schwertmuscheln und Fisch direkt vom Grill.",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
+      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Ein großes argentinisches Grillbuffet — Fleisch wird direkt am Tisch tranchiert und gegrillt, im Einkaufszentrum Zenia Boulevard.",drive:"6 min",photo:"che",url:"http://www.cherestaurant.es/"},
+      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Eine Grillbar im Viertel Lomas de Cabo Roig mit gegrillten Steaks und mediterranen Teilergerichten — darunter gegrillter Oktopus und Artischocken.",drive:"5 min",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
+      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · direkt am Strand",desc:"Mediterrane Meeresfrüchte, Tapas und Paellas direkt an der Strandpromenade von Cabo Roig — fußläufig von der Wohnung.",drive:"Zu Fuß erreichbar",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
+      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Eine entspannte, familiengeführte Cafetería-Bar mit beheizter Terrasse und Kinderspielecke — gut für ein einfaches Frühstück, einen Kaffee oder ein zwangloses Essen abseits des Touristentrubels.",drive:"12 min",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
+      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Eine internationale Bar-Restaurant nahe Cabo Roig mit entspanntem Lounge-Ambiente — auf der Karte stehen mexikanische, italienische und Steakhouse-Gerichte.",drive:"5 min",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
+      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Ein traditionelles spanisches Lokal nahe Cabo Roig für klassisches pescaíto frito — frittierte Calamares, Sardellen und Fisch im Teigmantel — sowie Meeresfrüchteplatten und kalte Getränke.",drive:"5 min",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
+      {name:"Aberdinangus Argentinisches Restaurant",place:"Calle Cielo 10, Cabo Roig",desc:"Ein argentinisches Steakhouse in Cabo Roig mit gegrilltem Rindfleisch und Röstkartoffeln — Reservierung per Telefon oder WhatsApp empfohlen.",drive:"3 min",photo:"aberdinangus",url:"https://aberdinangus.com/"},
+      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Ein asiatisches Fusion-Restaurant in Mil Palmeras, das frisches Sushi und Nigiri mit gegrillten Meeresfrüchteplatten kombiniert — Garnelen, Schwertmuscheln und Fisch direkt vom Grill.",drive:"15 min",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
     ],
     galleryCta:"Fotos der Wohnung ansehen",bookCta:"Verfügbarkeit prüfen"},
   galleryPage:{eyebrow:"Galerie",title:"Casa de Don Simón in Bildern",sub:"Ein Blick auf die Schlafzimmer, den Wohnbereich, die Küche, die Terrasse und den Gemeinschaftspool der Wohnung.",comingSoon:"Neue Fotos der Wohnung sind unterwegs — schaut bald wieder vorbei.",
@@ -448,8 +469,15 @@ de:{
     wineNote:"Besuche nur nach vorheriger Anmeldung — das Weingut vorab kontaktieren, um Führung und Verkostung zu vereinbaren.",
     wineCta:"Website ansehen",wineUrl:"http://www.vinosladama.com/",
     foodTitle:"Ein Geschmack der Küste",
-    foodDesc:"Paella und frischer, im Freien zubereiteter Fisch gehören zu lokalen Festen und Markttagen dazu — ein Besuch lohnt sich, wenn gerade eines angekündigt ist."},
-  common:{lang:"Sprache",readMore:"Details",backTop:"Nach oben",close:"Schließen",photo:"Foto",directions:"Route",website:"Webseite",musicOn:"Hintergrundmusik abspielen",musicOff:"Hintergrundmusik pausieren",routeMap:"Routenkarte",parkingFree:"Kostenloses Parken",parkingPaid:"Kostenpflichtiges Parken"}
+    foodDesc:"Paella und frischer, im Freien zubereiteter Fisch gehören zu lokalen Festen und Markttagen dazu — ein Besuch lohnt sich, wenn gerade eines angekündigt ist.",
+    infoTitle:"Praktische Informationen",infoSub:"Ein paar nützliche Links für die Planung Ihres Aufenthalts und die Erkundung der Umgebung.",
+    weatherTitle:"Live-Wettervorhersage",
+    weatherDesc:"Eine interaktive Wetterkarte mit Zentrum auf Cabo Roig — prüfen Sie Vorhersage, Wind und Regen, bevor Sie zum Strand gehen.",
+    weatherCta:"Wetter ansehen",weatherUrl:"https://meteo365.es/?37.91,-0.73,10&temp,icon&lvl=2m",
+    drivingTitle:"Autofahren in Spanien",
+    drivingDesc:"Planen Sie einen Mietwagen? Dieses englischsprachige Portal informiert über spanische Verkehrsregeln und Neuigkeiten für ausländische Bewohner und Besucher an der Costa Blanca.",
+    drivingCta:"n332.es besuchen",drivingUrl:"https://n332.es/"},
+  common:{lang:"Sprache",readMore:"Details",backTop:"Nach oben",close:"Schließen",photo:"Foto",directions:"Route",website:"Webseite",musicOn:"Hintergrundmusik abspielen",musicOff:"Hintergrundmusik pausieren",routeMap:"Routenkarte",parkingFree:"Kostenloses Parken",parkingPaid:"Kostenpflichtiges Parken",notOnMap:"Etwas weiter entfernt, direkt außerhalb dieses Kartenausschnitts:"}
 },
 nl:{
   nav:{home:"Home",apartment:"Het appartement",attractions:"Uitjes",local:"Lokaal leven",gallery:"Galerij",contact:"Klantenzone"},
@@ -483,7 +511,7 @@ nl:{
       {l:"Golfbaan Villamartín",v:"2,1 km · 5 min rijden"},{l:"Zenia Boulevard (winkels & restaurants)",v:"4 km · 10 min rijden"}
     ],
     parkingNote:"De meeste gezinnen rijden naar het strand in plaats van te lopen — alle strandparkeerplaatsen aan de Orihuela Costa, ook bij Cabo Roig en La Zenia, zijn gratis.",
-    mapTitle:"Route naar het strand",mapCta:"Openen in Google Maps",mapDistance:"1,6 km · 5 min rijden",mapHere:"Hier ben je",
+    mapTitle:"Route naar het strand",mapCta:"Openen in Google Maps",mapDistance:"1,6 km · 5 min rijden",mapHere:"Hier ben je",moreBeachesTitle:"Meer baaien in de buurt",
     beachesTitle:"Stranden in de buurt",beachesSub:"Alle stranden op korte afstand van het appartement — tik op een pin of kaart voor de route.",
     beachesImportant:"Parkeren bij het strand is overal langs dit kuststuk gratis — behalve in Torrevieja, waar de strandparkeerplaatsen betaald zijn.",
     airportsTitle:"Dichtstbijzijnde luchthavens",
@@ -498,14 +526,14 @@ nl:{
     restaurantsSub:"Een handvol gewaardeerde restaurants op korte rijafstand, van een Argentijnse grill tot zeevruchten aan het strand.",
     restaurantsCta:"Meer info",
     restaurants:[
-      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Een groot Argentijns grillbuffet — vlees wordt aan tafel gesneden en gegrild, in winkelcentrum Zenia Boulevard.",photo:"che",url:"http://www.cherestaurant.es/"},
-      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Een grillbar in de wijk Lomas de Cabo Roig met geroosterde steaks en mediterrane deelgerechten — waaronder gegrilde octopus en artisjokken.",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
-      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · aan het strand",desc:"Mediterrane zeevruchten, tapas en paella's direct aan de boulevard van Cabo Roig — op loopafstand van het appartement.",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
-      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Een relaxte, familiaire cafetería-bar met verwarmd terras en een speelhoek voor kinderen — fijn voor een rustig ontbijt, koffie of informele maaltijd, weg van de toeristendrukte.",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
-      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Een internationale bar-restaurant bij Cabo Roig met een ontspannen loungesfeer — op de kaart staan Mexicaanse, Italiaanse en steakhousegerechten.",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
-      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Een traditionele Spaanse tent bij Cabo Roig voor klassieke pescaíto frito — gefrituurde inktvisringen, ansjovis en vis in beslag — plus schaal- en schelpdierenplateaus en koude drankjes.",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
-      {name:"Aberdinangus Argentijns Restaurant",place:"Calle Cielo 10, Cabo Roig",desc:"Een Argentijnse steakhouse in Cabo Roig met gegrild rundvlees en gebakken aardappelen — reserveren via telefoon of WhatsApp aanbevolen.",photo:"aberdinangus",url:"https://aberdinangus.com/"},
-      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Een Aziatisch fusionrestaurant in Mil Palmeras dat verse sushi en nigiri combineert met gegrilde schaal- en schelpdierenplateaus — garnalen, scheermessen en vis vers van de grill.",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
+      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Een groot Argentijns grillbuffet — vlees wordt aan tafel gesneden en gegrild, in winkelcentrum Zenia Boulevard.",drive:"6 min",photo:"che",url:"http://www.cherestaurant.es/"},
+      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Een grillbar in de wijk Lomas de Cabo Roig met geroosterde steaks en mediterrane deelgerechten — waaronder gegrilde octopus en artisjokken.",drive:"5 min",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
+      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · aan het strand",desc:"Mediterrane zeevruchten, tapas en paella's direct aan de boulevard van Cabo Roig — op loopafstand van het appartement.",drive:"Loopafstand",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
+      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Een relaxte, familiaire cafetería-bar met verwarmd terras en een speelhoek voor kinderen — fijn voor een rustig ontbijt, koffie of informele maaltijd, weg van de toeristendrukte.",drive:"12 min",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
+      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Een internationale bar-restaurant bij Cabo Roig met een ontspannen loungesfeer — op de kaart staan Mexicaanse, Italiaanse en steakhousegerechten.",drive:"5 min",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
+      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Een traditionele Spaanse tent bij Cabo Roig voor klassieke pescaíto frito — gefrituurde inktvisringen, ansjovis en vis in beslag — plus schaal- en schelpdierenplateaus en koude drankjes.",drive:"5 min",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
+      {name:"Aberdinangus Argentijns Restaurant",place:"Calle Cielo 10, Cabo Roig",desc:"Een Argentijnse steakhouse in Cabo Roig met gegrild rundvlees en gebakken aardappelen — reserveren via telefoon of WhatsApp aanbevolen.",drive:"3 min",photo:"aberdinangus",url:"https://aberdinangus.com/"},
+      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Een Aziatisch fusionrestaurant in Mil Palmeras dat verse sushi en nigiri combineert met gegrilde schaal- en schelpdierenplateaus — garnalen, scheermessen en vis vers van de grill.",drive:"15 min",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
     ],
     galleryCta:"Bekijk foto's van het appartement",bookCta:"Beschikbaarheid bekijken"},
   galleryPage:{eyebrow:"Galerij",title:"Casa de Don Simón in beeld",sub:"Een kijkje in de slaapkamers, woonruimte, keuken, het terras en het gemeenschappelijke zwembad van het appartement.",comingSoon:"Nieuwe foto's van het appartement zijn onderweg — kom snel terug.",
@@ -557,8 +585,15 @@ nl:{
     wineNote:"Bezoeken enkel op afspraak — neem vooraf contact op met het wijnhuis om een rondleiding en proeverij te regelen.",
     wineCta:"Bekijk website",wineUrl:"http://www.vinosladama.com/",
     foodTitle:"Een smaak van de kust",
-    foodDesc:"Paella en verse zeevruchten die buiten worden bereid, horen bij lokale feesten en marktdagen — de moeite waard om je bezoek daarop te plannen als je er een ziet aangekondigd."},
-  common:{lang:"Taal",readMore:"Details",backTop:"Naar boven",close:"Sluiten",photo:"Foto",directions:"Route",website:"Website",musicOn:"Achtergrondmuziek afspelen",musicOff:"Achtergrondmuziek pauzeren",routeMap:"Routekaart",parkingFree:"Gratis parkeren",parkingPaid:"Betaald parkeren"}
+    foodDesc:"Paella en verse zeevruchten die buiten worden bereid, horen bij lokale feesten en marktdagen — de moeite waard om je bezoek daarop te plannen als je er een ziet aangekondigd.",
+    infoTitle:"Praktische informatie",infoSub:"Een paar handige links om je verblijf te plannen en de omgeving te verkennen.",
+    weatherTitle:"Actuele weersverwachting",
+    weatherDesc:"Een interactieve weerkaart gecentreerd op Cabo Roig — bekijk de verwachting, wind en regen voordat je naar het strand gaat.",
+    weatherCta:"Bekijk het weer",weatherUrl:"https://meteo365.es/?37.91,-0.73,10&temp,icon&lvl=2m",
+    drivingTitle:"Autorijden in Spanje",
+    drivingDesc:"Ben je van plan een auto te huren? Dit Engelstalige portaal biedt Spaanse verkeersregels en rijnieuws voor buitenlandse bewoners en bezoekers aan de Costa Blanca.",
+    drivingCta:"Bezoek n332.es",drivingUrl:"https://n332.es/"},
+  common:{lang:"Taal",readMore:"Details",backTop:"Naar boven",close:"Sluiten",photo:"Foto",directions:"Route",website:"Website",musicOn:"Achtergrondmuziek afspelen",musicOff:"Achtergrondmuziek pauzeren",routeMap:"Routekaart",parkingFree:"Gratis parkeren",parkingPaid:"Betaald parkeren",notOnMap:"Iets verder, net buiten dit kaartbeeld:"}
 },
 fr:{
   nav:{home:"Accueil",apartment:"L'appartement",attractions:"Activités",local:"Vie locale",gallery:"Galerie",contact:"Espace client"},
@@ -592,7 +627,7 @@ fr:{
       {l:"Golf de Villamartín",v:"2,1 km · 5 min en voiture"},{l:"Zenia Boulevard (boutiques & restaurants)",v:"4 km · 10 min en voiture"}
     ],
     parkingNote:"La plupart des familles vont à la plage en voiture plutôt qu'à pied — tous les parkings de plage de l'Orihuela Costa, y compris à Cabo Roig et à La Zenia, sont gratuits.",
-    mapTitle:"Itinéraire vers la plage",mapCta:"Ouvrir dans Google Maps",mapDistance:"1,6 km · 5 min en voiture",mapHere:"Vous êtes ici",
+    mapTitle:"Itinéraire vers la plage",mapCta:"Ouvrir dans Google Maps",mapDistance:"1,6 km · 5 min en voiture",mapHere:"Vous êtes ici",moreBeachesTitle:"Autres criques à proximité",
     beachesTitle:"Plages à proximité",beachesSub:"Toutes les plages accessibles facilement depuis l'appartement — touchez un repère ou une carte pour l'itinéraire.",
     beachesImportant:"Le stationnement à la plage est gratuit sur tout ce littoral — sauf à Torrevieja, où les parkings de plage sont payants.",
     airportsTitle:"Aéroports les plus proches",
@@ -607,14 +642,14 @@ fr:{
     restaurantsSub:"Quelques restaurants bien notés à quelques minutes en voiture, d'une grillade argentine aux fruits de mer en bord de plage.",
     restaurantsCta:"Plus d'infos",
     restaurants:[
-      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Un grand buffet de grillades argentines — la viande est découpée et grillée à table, dans le centre commercial Zenia Boulevard.",photo:"che",url:"http://www.cherestaurant.es/"},
-      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Un grill bar dans le quartier de Lomas de Cabo Roig, avec viandes grillées au feu de bois et plats méditerranéens à partager — poulpe et artichauts grillés notamment.",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
-      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · en bord de mer",desc:"Fruits de mer méditerranéens, tapas et paellas sur le front de mer de Cabo Roig — à quelques minutes à pied de l'appartement.",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
-      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Un café-bar familial et décontracté, avec terrasse chauffée et coin jeux pour enfants — idéal pour un petit-déjeuner tranquille, un café ou un repas simple loin du circuit touristique.",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
-      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Un bar-restaurant international près de Cabo Roig à l'ambiance lounge détendue — la carte propose des plats mexicains, italiens et de type steakhouse.",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
-      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Une adresse espagnole traditionnelle près de Cabo Roig pour un authentique pescaíto frito — calamars, anchois et poisson frits — ainsi que des plateaux de fruits de mer et des boissons fraîches.",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
-      {name:"Aberdinangus Restaurant Argentin",place:"Calle Cielo 10, Cabo Roig",desc:"Une grillade argentine à Cabo Roig avec des pièces de bœuf grillées et des pommes de terre rôties — réservation recommandée par téléphone ou WhatsApp.",photo:"aberdinangus",url:"https://aberdinangus.com/"},
-      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Un restaurant de fusion asiatique à Mil Palmeras qui associe sushis et nigiris frais à des plateaux de fruits de mer grillés — gambas, couteaux et poisson tout juste grillés.",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
+      {name:"Che!! Argentinian Grill (Che Asador Argentino)",place:"La Zenia · Zenia Boulevard",desc:"Un grand buffet de grillades argentines — la viande est découpée et grillée à table, dans le centre commercial Zenia Boulevard.",drive:"6 min",photo:"che",url:"http://www.cherestaurant.es/"},
+      {name:"Angelique Grill Bar",place:"Lomas de Cabo Roig",desc:"Un grill bar dans le quartier de Lomas de Cabo Roig, avec viandes grillées au feu de bois et plats méditerranéens à partager — poulpe et artichauts grillés notamment.",drive:"5 min",photo:"angelique",url:"https://maps.app.goo.gl/4KCyZo8FNtvuy1JVA"},
+      {name:"La Bahía de Cabo Roig",place:"Cabo Roig · en bord de mer",desc:"Fruits de mer méditerranéens, tapas et paellas sur le front de mer de Cabo Roig — à quelques minutes à pied de l'appartement.",drive:"À pied",photo:"labahia",url:"https://www.google.com/maps/search/?api=1&query=Restaurante+La+Bahia+de+Cabo+Roig+Orihuela+Costa"},
+      {name:"Rincón de Adrián",place:"Pilar de la Horadada",desc:"Un café-bar familial et décontracté, avec terrasse chauffée et coin jeux pour enfants — idéal pour un petit-déjeuner tranquille, un café ou un repas simple loin du circuit touristique.",drive:"12 min",photo:"adrian",url:"https://rincon-de-adrian.makro.rest/"},
+      {name:"Chill Out International Restaurant",place:"Orihuela Costa",desc:"Un bar-restaurant international près de Cabo Roig à l'ambiance lounge détendue — la carte propose des plats mexicains, italiens et de type steakhouse.",drive:"5 min",photo:"chillout",url:"https://maps.app.goo.gl/FVkd9x6WPPKeyWtQ9"},
+      {name:"Olé Olé Spanish Food and Drinks",place:"Orihuela Costa",desc:"Une adresse espagnole traditionnelle près de Cabo Roig pour un authentique pescaíto frito — calamars, anchois et poisson frits — ainsi que des plateaux de fruits de mer et des boissons fraîches.",drive:"5 min",photo:"oleole",url:"https://maps.app.goo.gl/vA8ramLGdn8ycCPY6"},
+      {name:"Aberdinangus Restaurant Argentin",place:"Calle Cielo 10, Cabo Roig",desc:"Une grillade argentine à Cabo Roig avec des pièces de bœuf grillées et des pommes de terre rôties — réservation recommandée par téléphone ou WhatsApp.",drive:"3 min",photo:"aberdinangus",url:"https://aberdinangus.com/"},
+      {name:"Food House Mil Palmeras",place:"Mil Palmeras",desc:"Un restaurant de fusion asiatique à Mil Palmeras qui associe sushis et nigiris frais à des plateaux de fruits de mer grillés — gambas, couteaux et poisson tout juste grillés.",drive:"15 min",photo:"foodhouse",url:"https://maps.app.goo.gl/JML6ZTaAQn5NcRkQA"}
     ],
     galleryCta:"Voir les photos de l'appartement",bookCta:"Vérifier les disponibilités"},
   galleryPage:{eyebrow:"Galerie",title:"Casa de Don Simón, en images",sub:"Un aperçu des chambres, de l'espace de vie, de la cuisine, de la terrasse et de la piscine communautaire de l'appartement.",comingSoon:"De nouvelles photos de l'appartement arrivent bientôt — repassez voir.",
@@ -666,8 +701,15 @@ fr:{
     wineNote:"Les visites se font uniquement sur rendez-vous — contactez le domaine à l'avance pour organiser la visite et la dégustation.",
     wineCta:"Voir le site",wineUrl:"http://www.vinosladama.com/",
     foodTitle:"Un avant-goût du littoral",
-    foodDesc:"La paella et les fruits de mer frais cuisinés en plein air font partie des fêtes locales et des jours de marché — cela vaut la peine de caler une visite si vous en voyez une annoncée."},
-  common:{lang:"Langue",readMore:"Détails",backTop:"Haut de page",close:"Fermer",photo:"Photo",directions:"Itinéraire",website:"Site web",musicOn:"Lancer la musique d'ambiance",musicOff:"Mettre la musique en pause",routeMap:"Carte de l'itinéraire",parkingFree:"Parking gratuit",parkingPaid:"Parking payant"}
+    foodDesc:"La paella et les fruits de mer frais cuisinés en plein air font partie des fêtes locales et des jours de marché — cela vaut la peine de caler une visite si vous en voyez une annoncée.",
+    infoTitle:"Informations pratiques",infoSub:"Quelques liens utiles pour préparer votre séjour et vous déplacer dans la région.",
+    weatherTitle:"Météo en direct",
+    weatherDesc:"Une carte météo interactive centrée sur Cabo Roig — consultez les prévisions, le vent et la pluie avant d'aller à la plage.",
+    weatherCta:"Voir la météo",weatherUrl:"https://meteo365.es/?37.91,-0.73,10&temp,icon&lvl=2m",
+    drivingTitle:"Conduire en Espagne",
+    drivingDesc:"Vous envisagez de louer une voiture ? Ce portail en anglais publie le code de la route espagnol et des actualités pour les résidents étrangers et visiteurs de la Costa Blanca.",
+    drivingCta:"Visiter n332.es",drivingUrl:"https://n332.es/"},
+  common:{lang:"Langue",readMore:"Détails",backTop:"Haut de page",close:"Fermer",photo:"Photo",directions:"Itinéraire",website:"Site web",musicOn:"Lancer la musique d'ambiance",musicOff:"Mettre la musique en pause",routeMap:"Carte de l'itinéraire",parkingFree:"Parking gratuit",parkingPaid:"Parking payant",notOnMap:"Un peu plus loin, juste en dehors du cadre de cette carte :"}
 }
 };
 

@@ -62,7 +62,9 @@ const ICONS = {
   grape:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M9.5 4.5h5"/><circle cx="9" cy="9" r="2.2"/><circle cx="15" cy="9" r="2.2"/><circle cx="12" cy="12.5" r="2.2"/><circle cx="7.2" cy="13.5" r="2.2"/><circle cx="16.8" cy="13.5" r="2.2"/><circle cx="9.5" cy="17.5" r="2.2"/><circle cx="14.5" cy="17.5" r="2.2"/></svg>',
   musicOn:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>',
   musicOff:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/><path d="M3 3l18 18" stroke-width="2"/></svg>',
-  chat:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.4H12a8.5 8.5 0 0 1-4.2-1.1L3 20l1.2-4.8A8.4 8.4 0 0 1 12 3.1h.4a8.38 8.38 0 0 1 8.4 8.4z"/><path d="M8 11h.01M12 11h.01M16 11h.01" stroke-width="2.2"/></svg>'
+  chat:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.4H12a8.5 8.5 0 0 1-4.2-1.1L3 20l1.2-4.8A8.4 8.4 0 0 1 12 3.1h.4a8.38 8.38 0 0 1 8.4 8.4z"/><path d="M8 11h.01M12 11h.01M16 11h.01" stroke-width="2.2"/></svg>',
+  car:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16l1.5-5.5A2 2 0 0 1 6.4 9h11.2a2 2 0 0 1 1.9 1.5L21 16"/><rect x="2.5" y="16" width="19" height="4" rx="1.5"/><circle cx="7" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M5 13h14"/></svg>',
+  sun:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>'
 };
 const REGION_ICON = { alicante:ICONS.wave, murcia:ICONS.mountain, andalusia:ICONS.cactus, valencia:ICONS.boat };
 const REGION_CLASS = { alicante:"reg-alicante", murcia:"reg-murcia", andalusia:"reg-andalusia", valencia:"reg-valencia" };
@@ -228,6 +230,60 @@ function areaMapSVG(items, homeLabel){
   </svg>`;
 }
 
+/* ---------- real-photo area map (restaurants / beaches) -----------
+   Based on a real Google Maps satellite screenshot the guest sent us.
+   At its zoom level the screenshot only labels towns/hotels, not individual
+   businesses, so rather than guess street-level pixel positions for each
+   restaurant we group them into the real, labelled clusters visible on the
+   photo (Cabo Roig · La Zenia/Orihuela Costa · Mil Palmeras). Anything
+   further away that falls outside this photo's frame is listed underneath
+   instead of being placed on the image. */
+const MAP_GROUPS = {
+  latmata:     {x:66.6, y:5.6,  name:"La Mata, Torrevieja"},
+  torrevieja:  {x:61.2, y:30.1, name:"Torrevieja"},
+  lazenia:     {x:46.9, y:65.2, name:"La Zenia · Orihuela Costa"},
+  caboroig:    {x:44.7, y:78.2, name:"Cabo Roig"},
+  campoamor:   {x:38.3, y:87.7, name:"Dehesa de Campoamor"},
+  milpalmeras: {x:34.0, y:97.7, name:"Mil Palmeras"}
+};
+const RESTAURANT_GROUPS = ["lazenia","caboroig","caboroig","offmap","caboroig","caboroig","caboroig","milpalmeras"];
+const BEACH_GROUPS = ["caboroig","lazenia","offmap","campoamor","lazenia","offmap","torrevieja","latmata"];
+
+/* Small coves near Campoamor/Dehesa de Campoamor the guest pointed out on their
+   own Google Maps screenshot — shown as live "open in Google Maps" search
+   links rather than full beach cards, since we don't have photos/drive times
+   researched for these yet. */
+const MORE_BEACH_LINKS = ["Playa de la Glea", "Playa Aguamarina, Campoamor", "Caleta de la Glea", "Cala de Campoamor"];
+
+function realAreaMap(items){
+  const onMap = items.filter(it => it.group !== "offmap");
+  const offMap = items.filter(it => it.group === "offmap");
+  const groupKeys = Object.keys(MAP_GROUPS).filter(g => onMap.some(it => it.group === g));
+  const pins = groupKeys.map((g,gi) => ({
+    letter: String.fromCharCode(65+gi),
+    grp: MAP_GROUPS[g],
+    nums: onMap.filter(it => it.group === g)
+  }));
+  const pinEls = pins.map(p => `<a class="real-map-pin" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.grp.name + ", Orihuela Costa, Alicante")}" target="_blank" rel="noopener" style="left:${p.grp.x}%;top:${p.grp.y}%" aria-label="${esc(p.grp.name)}"><span class="real-map-pin-dot"><span>${p.letter}</span></span></a>`).join("");
+  const legendEls = pins.map(p => `<div class="map-legend-row">
+      <span class="map-legend-letter">${p.letter}</span>
+      <div class="map-legend-text">
+        <b>${esc(p.grp.name)}</b>
+        <span>${p.nums.map(n => `<a href="${n.mapUrl}" target="_blank" rel="noopener" class="map-legend-num">#${n.num} ${esc(n.label)}</a>`).join("")}</span>
+      </div>
+    </div>`).join("");
+  const offMapHTML = offMap.length ? `<div class="map-offnote">
+      <span>${esc(t().common.notOnMap)}</span>
+      ${offMap.map(n => `<a href="${n.mapUrl}" target="_blank" rel="noopener" class="map-legend-num">#${n.num} ${esc(n.label)}</a>`).join("")}
+    </div>` : "";
+  return `<div class="real-map-photo">
+      <img src="${LOCAL_IMAGES.areaMapPhoto}" alt="Satellite map of the Cabo Roig / Orihuela Costa coastline" loading="lazy"/>
+      ${pinEls}
+    </div>
+    <div class="map-legend">${legendEls}</div>
+    ${offMapHTML}`;
+}
+
 /* ---------- pages ---------- */
 function pageHome(){
   const u = t();
@@ -339,6 +395,12 @@ function pageApartment(){
       </div>
       ${routeMapSVG(p.mapDistance, p.mapHere)}
     </div>
+    <div class="quick-beach-links">
+      <h4>${esc(p.moreBeachesTitle)}</h4>
+      <div class="quick-beach-chip-row">
+        ${MORE_BEACH_LINKS.map(b => `<a class="quick-beach-chip" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b + ', Orihuela Costa, Alicante')}" target="_blank" rel="noopener">${ICONS.wave} ${esc(b)}</a>`).join("")}
+      </div>
+    </div>
   </section>
   <section class="wrap">
     <div class="section-head"><h2>${esc(p.airportsTitle)}</h2></div>
@@ -361,15 +423,12 @@ function pageApartment(){
       <p>${esc(p.restaurantsSub)}</p>
     </div>
     <div class="area-map">
-      ${areaMapSVG(p.restaurants.map((r,i) => {
-        let label = r.place.includes(",") ? r.place.split(",").pop().trim() : r.place.split("·")[0].trim();
-        if(label.length > 19) label = label.slice(0,17).trim() + "…";
-        return {
-          num: i+1,
-          label,
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(r.name + ", " + r.place)
-        };
-      }), t().homeBase)}
+      ${realAreaMap(p.restaurants.map((r,i) => ({
+        num: i+1,
+        label: r.name,
+        group: RESTAURANT_GROUPS[i],
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(r.name + ", " + r.place)
+      })))}
     </div>
     <div class="restaurant-grid reveal-stagger">
       ${p.restaurants.map((r,i) => `
@@ -378,6 +437,7 @@ function pageApartment(){
           <div class="restaurant-body">
             <h4>${esc(r.name)}</h4>
             <span class="place">${esc(r.place)}</span>
+            ${r.drive ? `<span class="place">${ICONS.clock} ${esc(r.drive)} ${esc(t().driveFrom)}</span>` : ""}
             <p>${esc(r.desc)}</p>
             <div class="attr-links">
               <a class="btn btn-ghost btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(p.restaurantsCta)}</a>
@@ -397,16 +457,13 @@ function pageApartment(){
       <p>${esc(p.beachesImportant)}</p>
     </div>
     <div class="area-map">
-      ${areaMapSVG(BEACHES.map((b,i) => {
-        let label = b.i18n[currentLang].name.split(",")[0];
-        if(label.length > 19) label = label.slice(0,17).trim() + "…";
-        return {
-          num: i+1,
-          label,
-          paid: b.paid,
-          mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(b.i18n[currentLang].name + ", Alicante")
-        };
-      }), t().homeBase)}
+      ${realAreaMap(BEACHES.map((b,i) => ({
+        num: i+1,
+        label: b.i18n[currentLang].name,
+        group: BEACH_GROUPS[i],
+        paid: b.paid,
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(b.i18n[currentLang].name + ", Alicante")
+      })))}
     </div>
     <div class="legend-row">
       <span class="legend-item"><span class="legend-dot dot-free"></span>${esc(t().common.parkingFree)}</span>
@@ -649,6 +706,26 @@ function pageLocal(){
           <h3><span class="icon">${ICONS.kitchen}</span>${esc(p.foodTitle)}</h3>
           <p>${esc(p.foodDesc)}</p>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrap">
+    <div class="section-head">
+      <h2>${esc(p.infoTitle)}</h2>
+      <p>${esc(p.infoSub)}</p>
+    </div>
+    <div class="info-grid reveal-stagger">
+      <div class="highlight-card">
+        <span class="icon">${ICONS.sun}</span>
+        <h3>${esc(p.weatherTitle)}</h3>
+        <p>${esc(p.weatherDesc)}</p>
+        <a class="btn btn-ghost btn-sm" href="${esc(p.weatherUrl)}" target="_blank" rel="noopener">${esc(p.weatherCta)}</a>
+      </div>
+      <div class="highlight-card">
+        <span class="icon">${ICONS.car}</span>
+        <h3>${esc(p.drivingTitle)}</h3>
+        <p>${esc(p.drivingDesc)}</p>
+        <a class="btn btn-ghost btn-sm" href="${esc(p.drivingUrl)}" target="_blank" rel="noopener">${esc(p.drivingCta)}</a>
       </div>
     </div>
   </section>`;

@@ -217,6 +217,19 @@ p{margin:0;}
 }
 .amenity-chip-row .amenity-chip .icon{width:18px;height:18px;color:var(--sea-bright);flex:none;}
 
+/* ===== Quick beach/cove links (live Google Maps search) ===== */
+.quick-beach-links{margin-top:18px;}
+.quick-beach-links h4{font-size:.86rem;font-weight:700;color:var(--ink-soft);margin-bottom:10px;}
+.quick-beach-chip-row{display:flex;flex-wrap:wrap;gap:10px;}
+.quick-beach-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 15px;border-radius:999px;text-decoration:none;
+  background:var(--paper-raised);border:1px solid var(--line-soft);
+  font-size:.82rem;font-weight:600;color:var(--ink);transition:border-color .15s ease,transform .15s ease;
+}
+.quick-beach-chip:hover{border-color:var(--sea-bright);transform:translateY(-1px);}
+.quick-beach-chip .icon{width:16px;height:16px;color:var(--sea-bright);flex:none;}
+
 /* ===== Sections ===== */
 section{padding-block:56px;}
 .section-head{max-width:640px;margin-bottom:34px;}
@@ -241,6 +254,12 @@ section{padding-block:56px;}
 }
 .highlight-card h3{font-size:1rem;}
 .highlight-card p{font-size:.86rem;color:var(--ink-soft);}
+
+/* ===== Practical info links ===== */
+.info-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+@media (min-width:640px){.info-grid{grid-template-columns:repeat(2,1fr);}}
+.info-grid .highlight-card{align-items:flex-start;}
+.info-grid .highlight-card .btn{align-self:flex-start;margin-top:2px;}
 
 /* ===== Region cards ===== */
 .region-grid{display:grid;grid-template-columns:1fr;gap:16px;}
@@ -487,6 +506,38 @@ section{padding-block:56px;}
 .legend-dot{width:12px;height:12px;border-radius:50%;flex:none;}
 .legend-dot.dot-free{background:var(--coral);}
 .legend-dot.dot-paid{background:var(--sun);}
+
+/* ===== Real-photo satellite area map ===== */
+.real-map-photo{position:relative;border-radius:var(--radius-m);overflow:hidden;border:1px solid var(--line-soft);}
+.real-map-photo img{width:100%;height:auto;display:block;}
+.real-map-pin{
+  position:absolute;transform:translate(-50%,-50%);text-decoration:none;
+}
+.real-map-pin-dot{
+  display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50% 50% 50% 4px;
+  background:var(--coral);color:#fff;font-size:.78rem;font-weight:800;font-family:var(--font-body);
+  box-shadow:0 3px 10px rgba(0,0,0,.35);border:2px solid #fff;transform:rotate(45deg);transition:transform .15s ease;
+}
+.real-map-pin-dot span{transform:rotate(-45deg);display:block;}
+.real-map-pin:hover .real-map-pin-dot{transform:rotate(45deg) scale(1.12);}
+.map-legend{display:flex;flex-direction:column;gap:10px;margin-top:14px;}
+.map-legend-row{display:flex;align-items:flex-start;gap:12px;}
+.map-legend-letter{
+  flex:none;width:26px;height:26px;border-radius:50%;background:var(--coral);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.74rem;font-weight:800;font-family:var(--font-body);
+}
+.map-legend-text{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.map-legend-text b{font-size:.88rem;}
+.map-legend-num{
+  display:inline-block;font-size:.72rem;font-weight:700;color:var(--sea-deep);text-decoration:none;
+  background:color-mix(in srgb, var(--sea-bright) 16%, transparent);border-radius:99px;padding:2px 9px;margin:2px 4px 0 0;
+}
+.map-legend-num:hover{background:color-mix(in srgb, var(--sea-bright) 28%, transparent);}
+.map-offnote{
+  margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft);
+  font-size:.8rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;align-items:center;gap:6px 4px;
+}
+.map-offnote .map-legend-num{color:var(--ink-soft);background:var(--line-soft);}
 
 /* ===== Gallery ===== */
 .gallery-cat{margin-top:38px;}
