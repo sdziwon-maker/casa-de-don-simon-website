@@ -64,7 +64,14 @@ const ICONS = {
   musicOff:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/><path d="M3 3l18 18" stroke-width="2"/></svg>',
   chat:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.4H12a8.5 8.5 0 0 1-4.2-1.1L3 20l1.2-4.8A8.4 8.4 0 0 1 12 3.1h.4a8.38 8.38 0 0 1 8.4 8.4z"/><path d="M8 11h.01M12 11h.01M16 11h.01" stroke-width="2.2"/></svg>',
   car:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16l1.5-5.5A2 2 0 0 1 6.4 9h11.2a2 2 0 0 1 1.9 1.5L21 16"/><rect x="2.5" y="16" width="19" height="4" rx="1.5"/><circle cx="7" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M5 13h14"/></svg>',
-  sun:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>'
+  sun:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>',
+  sunCloud:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3v2M4.6 5.6l1.4 1.4M3 10.8h2"/><circle cx="9.5" cy="9" r="3"/><path d="M8 19h9a3.5 3.5 0 0 0 .5-6.96A5 5 0 0 0 8.2 13.1 3 3 0 0 0 8 19z"/></svg>',
+  cloud:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a3.5 3.5 0 0 0 .5-6.96A5 5 0 0 0 7.2 12.1 3 3 0 0 0 7 18z"/></svg>',
+  cloudFog:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14h10a3.5 3.5 0 0 0 .3-6.98A5 5 0 0 0 7.3 8.1 3 3 0 0 0 7 14z"/><path d="M4 18h16M6 21h12"/></svg>',
+  cloudRain:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14h10a3.5 3.5 0 0 0 .3-6.98A5 5 0 0 0 7.3 8.1 3 3 0 0 0 7 14z"/><path d="M8 18l-1 3M12.5 18l-1 3M17 18l-1 3"/></svg>',
+  cloudSnow:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13h10a3.5 3.5 0 0 0 .3-6.98A5 5 0 0 0 7.3 7.1 3 3 0 0 0 7 13z"/><path d="M8 18v3M12 17v4M16 18v3M6.5 20.3l3-1.6M9 22l3-2.3L15 22M13.5 18.7l3 1.6"/></svg>',
+  cloudBolt:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13h10a3.5 3.5 0 0 0 .3-6.98A5 5 0 0 0 7.3 7.1 3 3 0 0 0 7 13z"/><path d="M13 17l-3 4h3l-2 3" stroke-linejoin="round"/></svg>',
+  droplet:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 4.6 6.5 8.2 6.5 11.2A6.5 6.5 0 0 1 5.5 14.2C5.5 11.2 8 7.6 12 3z"/></svg>'
 };
 const REGION_ICON = { alicante:ICONS.wave, murcia:ICONS.mountain, andalusia:ICONS.cactus, valencia:ICONS.boat };
 const REGION_CLASS = { alicante:"reg-alicante", murcia:"reg-murcia", andalusia:"reg-andalusia", valencia:"reg-valencia" };
@@ -284,6 +291,150 @@ function realAreaMap(items){
     ${offMapHTML}`;
 }
 
+/* ---------- weather hologram ---------- */
+const WEATHER_LAT = 37.9137, WEATHER_LON = -0.7298; // Cabo Roig
+let weatherTimer = null, weatherClockTimer = null;
+
+function weatherCodeInfo(code){
+  // WMO weather interpretation codes (Open-Meteo docs)
+  if(code === 0) return {icon:ICONS.sun, key:"clear"};
+  if(code === 1) return {icon:ICONS.sunCloud, key:"mainlyClear"};
+  if(code === 2) return {icon:ICONS.sunCloud, key:"partlyCloudy"};
+  if(code === 3) return {icon:ICONS.cloud, key:"overcast"};
+  if(code === 45 || code === 48) return {icon:ICONS.cloudFog, key:"fog"};
+  if([51,53,55,56,57].includes(code)) return {icon:ICONS.cloudRain, key:"drizzle"};
+  if([61,63,65,66,67,80,81,82].includes(code)) return {icon:ICONS.cloudRain, key:"rain"};
+  if([71,73,75,77,85,86].includes(code)) return {icon:ICONS.cloudSnow, key:"snow"};
+  if([95,96,99].includes(code)) return {icon:ICONS.cloudBolt, key:"thunderstorm"};
+  return {icon:ICONS.cloud, key:"overcast"};
+}
+
+function renderWeatherClock(){
+  const timeEl = document.getElementById("weatherHoloTime");
+  const dateEl = document.getElementById("weatherHoloDate");
+  if(!timeEl || !dateEl) return;
+  const now = new Date();
+  try{
+    timeEl.textContent = now.toLocaleTimeString(currentLang, {hour:"2-digit", minute:"2-digit", timeZone:"Europe/Madrid"});
+    dateEl.textContent = now.toLocaleDateString(currentLang, {weekday:"short", day:"numeric", month:"short", timeZone:"Europe/Madrid"});
+  }catch(e){
+    timeEl.textContent = now.toLocaleTimeString();
+    dateEl.textContent = now.toLocaleDateString();
+  }
+}
+
+async function fetchWeatherData(){
+  const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${WEATHER_LAT}&longitude=${WEATHER_LON}&current=temperature_2m,precipitation,rain,cloud_cover,weather_code,is_day&timezone=Europe%2FMadrid`;
+  const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${WEATHER_LAT}&longitude=${WEATHER_LON}&current=sea_surface_temperature&timezone=Europe%2FMadrid`;
+  const [weatherRes, marineRes] = await Promise.allSettled([
+    fetch(weatherUrl).then(r => r.ok ? r.json() : Promise.reject(new Error("weather fetch failed"))),
+    fetch(marineUrl).then(r => r.ok ? r.json() : Promise.reject(new Error("marine fetch failed")))
+  ]);
+  return {
+    weather: weatherRes.status === "fulfilled" ? weatherRes.value : null,
+    marine: marineRes.status === "fulfilled" ? marineRes.value : null
+  };
+}
+
+async function populateWeatherHologram(){
+  const card = document.getElementById("weatherHolo");
+  if(!card) return;
+  const u = t();
+  try{
+    const {weather, marine} = await fetchWeatherData();
+    if(!weather || !weather.current){
+      card.classList.add("is-unavailable");
+      card.classList.remove("is-loading");
+      return;
+    }
+    const cur = weather.current;
+    const info = weatherCodeInfo(cur.weather_code);
+    const seaTemp = (marine && marine.current && typeof marine.current.sea_surface_temperature === "number") ? marine.current.sea_surface_temperature : null;
+
+    const iconEl = document.getElementById("weatherHoloIcon");
+    const tempEl = document.getElementById("weatherHoloTemp");
+    const condEl = document.getElementById("weatherHoloCond");
+    const cloudEl = document.getElementById("weatherHoloCloud");
+    const rainEl = document.getElementById("weatherHoloRain");
+    const seaEl = document.getElementById("weatherHoloSea");
+    const seaRow = document.getElementById("weatherHoloSeaRow");
+
+    if(iconEl) iconEl.innerHTML = info.icon;
+    if(tempEl) tempEl.textContent = Math.round(cur.temperature_2m) + "°C";
+    if(condEl) condEl.textContent = u.weather.cond[info.key] || "";
+    if(cloudEl) cloudEl.textContent = Math.round(cur.cloud_cover) + "%";
+    if(rainEl) rainEl.textContent = (cur.rain != null ? cur.rain : cur.precipitation != null ? cur.precipitation : 0).toFixed(1) + " mm";
+    if(seaTemp != null){
+      if(seaEl) seaEl.textContent = Math.round(seaTemp * 10) / 10 + "°C";
+      if(seaRow) seaRow.hidden = false;
+    } else if(seaRow){
+      seaRow.hidden = true;
+    }
+    card.classList.remove("is-loading", "is-unavailable");
+    card.classList.add("is-live");
+  }catch(e){
+    card.classList.add("is-unavailable");
+    card.classList.remove("is-loading");
+  }
+}
+
+function initWeatherHologram(){
+  const card = document.getElementById("weatherHolo");
+  if(!card) return;
+  if(weatherTimer){ clearInterval(weatherTimer); weatherTimer = null; }
+  if(weatherClockTimer){ clearInterval(weatherClockTimer); weatherClockTimer = null; }
+  renderWeatherClock();
+  weatherClockTimer = setInterval(renderWeatherClock, 30000);
+  populateWeatherHologram();
+  weatherTimer = setInterval(populateWeatherHologram, 10 * 60 * 1000);
+}
+
+function weatherHologramHTML(){
+  const u = t().weather;
+  return `
+  <div class="hero-weather wrap">
+    <div class="weather-holo is-loading" id="weatherHolo">
+      <div class="weather-holo-scan"></div>
+      <div class="weather-holo-head">
+        <span class="weather-holo-title">${ICONS.sun} ${esc(u.title)}</span>
+        <span class="weather-holo-live"><span class="weather-holo-dot"></span>${esc(u.live)}</span>
+      </div>
+      <div class="weather-holo-body">
+        <div class="weather-holo-main">
+          <span class="weather-holo-icon" id="weatherHoloIcon">${ICONS.sun}</span>
+          <div class="weather-holo-temp-wrap">
+            <span class="weather-holo-temp" id="weatherHoloTemp">--°C</span>
+            <span class="weather-holo-cond" id="weatherHoloCond">${esc(u.loading)}</span>
+          </div>
+        </div>
+        <div class="weather-holo-stats">
+          <div class="weather-holo-stat">
+            <span class="icon">${ICONS.cloud}</span>
+            <span class="weather-holo-stat-label">${esc(u.cloud)}</span>
+            <span class="weather-holo-stat-val" id="weatherHoloCloud">--</span>
+          </div>
+          <div class="weather-holo-stat">
+            <span class="icon">${ICONS.cloudRain}</span>
+            <span class="weather-holo-stat-label">${esc(u.rain)}</span>
+            <span class="weather-holo-stat-val" id="weatherHoloRain">--</span>
+          </div>
+          <div class="weather-holo-stat" id="weatherHoloSeaRow" hidden>
+            <span class="icon">${ICONS.droplet}</span>
+            <span class="weather-holo-stat-label">${esc(u.seaTemp)}</span>
+            <span class="weather-holo-stat-val" id="weatherHoloSea">--</span>
+          </div>
+          <div class="weather-holo-stat weather-holo-clock">
+            <span class="icon">${ICONS.clock}</span>
+            <span class="weather-holo-stat-label" id="weatherHoloDate">--</span>
+            <span class="weather-holo-stat-val" id="weatherHoloTime">--:--</span>
+          </div>
+        </div>
+      </div>
+      <p class="weather-holo-note">${esc(u.unavailable)}</p>
+    </div>
+  </div>`;
+}
+
 /* ---------- pages ---------- */
 function pageHome(){
   const u = t();
@@ -293,6 +444,7 @@ function pageHome(){
       <img src="${LOCAL_IMAGES.pool}" alt="Community pool at Casa de Don Simón, Cabo Roig" loading="eager"/>
     </div>
     <div class="hero-scrim"></div>
+    ${weatherHologramHTML()}
     <div class="hero-inner wrap">
       <div class="hero-eyebrow">${ICONS.pin} ${esc(u.hero.eyebrow)}</div>
       <h1>${esc(u.hero.title)}</h1>
@@ -319,6 +471,7 @@ function pageHome(){
       ${u.apartmentPage.amenities.slice(0,6).map((a,i) => `<div class="amenity-chip"><span class="icon">${AMENITY_ICON[i]}</span>${esc(a.l)}</div>`).join("")}
     </div>
   </section>
+
 
   <section class="wrap">
     <div class="section-head">
@@ -385,7 +538,7 @@ function pageApartment(){
       <p>${esc(p.locationSub)}</p>
     </div>
     <div class="distance-list">
-      ${p.distances.map(d => `<div class="distance-row"><span>${esc(d.l)}</span><b>${esc(d.v)}</b></div>`).join("")}
+      ${p.distances.map(d => `<a class="distance-row" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(d.l + ', Orihuela Costa, Alicante')}" target="_blank" rel="noopener"><span class="distance-row-label">${ICONS.pin}${esc(d.l)}</span><b>${esc(d.v)}</b></a>`).join("")}
     </div>
     <p style="margin-top:16px;color:var(--ink-soft);font-size:.9rem;max-width:68ch">${esc(p.parkingNote)}</p>
     <div class="route-map">
@@ -393,7 +546,10 @@ function pageApartment(){
         <h3>${esc(p.mapTitle)}</h3>
         <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent('Casa de Don Simón, Cabo Roig, Orihuela Costa')}&destination=${encodeURIComponent('Cabo Roig Beach, Orihuela Costa')}" target="_blank" rel="noopener">${esc(p.mapCta)}</a>
       </div>
-      ${routeMapSVG(p.mapDistance, p.mapHere)}
+      <div class="route-map-embed">
+        <iframe src="https://www.google.com/maps?q=${encodeURIComponent('Cabo Roig Beach, Orihuela Costa, Alicante')}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="${esc(p.mapTitle)}"></iframe>
+      </div>
+      <p class="route-map-caption">${esc(p.mapDistance)}</p>
     </div>
     <div class="quick-beach-links">
       <h4>${esc(p.moreBeachesTitle)}</h4>
@@ -824,7 +980,8 @@ function render(keepScroll){
   wireHeader();
   if(!keepScroll) window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
   initScrollFX();
-  if(route.page === "home") animateHeroStats();
+  if(route.page === "home"){ animateHeroStats(); initWeatherHologram(); }
+  else{ if(weatherTimer){ clearInterval(weatherTimer); weatherTimer = null; } if(weatherClockTimer){ clearInterval(weatherClockTimer); weatherClockTimer = null; } }
 }
 
 /* ---------- scroll-triggered motion ---------- */

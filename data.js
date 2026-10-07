@@ -21,6 +21,8 @@ en:{
     lead:"A sunny, family-friendly holiday apartment on Spain's southern Costa Blanca — your base for beach days, pool afternoons, and easy trips into three more regions of caves, waterfalls, mines and theme parks.",
     ctaBook:"Check availability",ctaExplore:"Plan your trip",
     stats:[{n:"3",l:"regions in day-trip reach"},{n:"25 min",l:"walk to the beach"},{n:"24",l:"family attractions listed"}]},
+  weather:{title:"Cabo Roig right now",live:"Live",loading:"Loading conditions…",unavailable:"Live weather loads when viewing the site online.",cloud:"Cloud cover",rain:"Rain",seaTemp:"Sea water",
+    cond:{clear:"Clear sky",mainlyClear:"Mainly clear",partlyCloudy:"Partly cloudy",overcast:"Overcast",fog:"Foggy",drizzle:"Light drizzle",rain:"Rainy",snow:"Snow",thunderstorm:"Thunderstorm"}},
   highlights:{eyebrow:"Why families choose it",title:"Everything a family trip actually needs",
     items:[
       {t:"Pool & kids' pool",d:"A shared pool with its own dedicated children's pool and garden, right outside the door."},
@@ -137,6 +139,8 @@ es:{
     lead:"Un soleado apartamento vacacional para familias en el sur de la Costa Blanca: tu base para días de playa, tardes de piscina y excursiones fáciles a otras tres regiones llenas de cuevas, cascadas, minas y parques temáticos.",
     ctaBook:"Consultar disponibilidad",ctaExplore:"Planea tu viaje",
     stats:[{n:"3",l:"regiones a un día de distancia"},{n:"25 min",l:"a pie hasta la playa"},{n:"24",l:"atracciones familiares"}]},
+  weather:{title:"Cabo Roig ahora mismo",live:"En directo",loading:"Cargando condiciones…",unavailable:"El tiempo en directo se carga al ver la web online.",cloud:"Nubosidad",rain:"Lluvia",seaTemp:"Agua del mar",
+    cond:{clear:"Cielo despejado",mainlyClear:"Mayormente despejado",partlyCloudy:"Parcialmente nublado",overcast:"Nublado",fog:"Niebla",drizzle:"Llovizna ligera",rain:"Lluvioso",snow:"Nieve",thunderstorm:"Tormenta"}},
   highlights:{eyebrow:"Por qué lo eligen las familias",title:"Todo lo que un viaje en familia necesita",
     items:[
       {t:"Piscina y piscina infantil",d:"Piscina comunitaria con piscina infantil propia y jardín, justo a la puerta."},
@@ -253,6 +257,8 @@ pl:{
     lead:"Słoneczny, przyjazny rodzinom apartament wakacyjny na południu Costa Blanca — baza wypadowa na dni na plaży, popołudnia przy basenie i łatwe wycieczki do trzech kolejnych regionów pełnych jaskiń, wodospadów, kopalni i parków rozrywki.",
     ctaBook:"Sprawdź dostępność",ctaExplore:"Zaplanuj wycieczki",
     stats:[{n:"3",l:"regiony w zasięgu jednego dnia"},{n:"25 min",l:"pieszo do plaży"},{n:"24",l:"atrakcji dla rodzin"}]},
+  weather:{title:"Cabo Roig teraz",live:"Na żywo",loading:"Ładowanie warunków…",unavailable:"Pogoda na żywo ładuje się po otwarciu strony online.",cloud:"Zachmurzenie",rain:"Opady deszczu",seaTemp:"Temperatura morza",
+    cond:{clear:"Bezchmurnie",mainlyClear:"Przeważnie bezchmurnie",partlyCloudy:"Częściowe zachmurzenie",overcast:"Pochmurno",fog:"Mgła",drizzle:"Lekka mżawka",rain:"Deszczowo",snow:"Śnieg",thunderstorm:"Burza"}},
   highlights:{eyebrow:"Dlaczego wybierają go rodziny",title:"Wszystko, czego potrzebuje rodzinny wyjazd",
     items:[
       {t:"Basen i brodzik dla dzieci",d:"Wspólny basen z osobnym brodzikiem dla dzieci i ogrodem, tuż za drzwiami."},
@@ -369,6 +375,8 @@ de:{
     lead:"Eine sonnige, familienfreundliche Ferienwohnung an der südlichen Costa Blanca — eure Basis für Strandtage, Pool-Nachmittage und bequeme Ausflüge in drei weitere Regionen voller Höhlen, Wasserfälle, Bergwerke und Freizeitparks.",
     ctaBook:"Verfügbarkeit prüfen",ctaExplore:"Ausflüge planen",
     stats:[{n:"3",l:"Regionen in Tagesausflug-Reichweite"},{n:"25 Min.",l:"zu Fuß zum Strand"},{n:"24",l:"Ausflugsziele für Familien"}]},
+  weather:{title:"Cabo Roig gerade jetzt",live:"Live",loading:"Wetterdaten werden geladen…",unavailable:"Live-Wetterdaten werden beim Aufruf der Website online geladen.",cloud:"Bewölkung",rain:"Regen",seaTemp:"Meerwasser",
+    cond:{clear:"Klarer Himmel",mainlyClear:"Überwiegend klar",partlyCloudy:"Teilweise bewölkt",overcast:"Bedeckt",fog:"Nebel",drizzle:"Leichter Nieselregen",rain:"Regnerisch",snow:"Schnee",thunderstorm:"Gewitter"}},
   highlights:{eyebrow:"Warum Familien sich hier wohlfühlen",title:"Alles, was ein Familienurlaub braucht",
     items:[
       {t:"Pool & Kinderbecken",d:"Ein Gemeinschaftspool mit eigenem Kinderbecken und Garten, direkt vor der Tür."},
@@ -485,6 +493,8 @@ nl:{
     lead:"Een zonnig, gezinsvriendelijk vakantieappartement aan de zuidelijke Costa Blanca — jullie uitvalsbasis voor strand­dagen, middagen bij het zwembad en makkelijke uitstapjes naar drie andere regio's vol grotten, watervallen, mijnen en pretparken.",
     ctaBook:"Beschikbaarheid bekijken",ctaExplore:"Plan je uitjes",
     stats:[{n:"3",l:"regio's binnen dagtrip-afstand"},{n:"25 min",l:"lopen naar het strand"},{n:"24",l:"gezinsuitjes op de kaart"}]},
+  weather:{title:"Cabo Roig nu",live:"Live",loading:"Weersomstandigheden laden…",unavailable:"Live weerdata wordt geladen wanneer de site online wordt bekeken.",cloud:"Bewolking",rain:"Regen",seaTemp:"Zeewater",
+    cond:{clear:"Heldere lucht",mainlyClear:"Overwegend helder",partlyCloudy:"Gedeeltelijk bewolkt",overcast:"Bewolkt",fog:"Mist",drizzle:"Lichte motregen",rain:"Regenachtig",snow:"Sneeuw",thunderstorm:"Onweer"}},
   highlights:{eyebrow:"Waarom gezinnen hiervoor kiezen",title:"Alles wat een gezinsreis nodig heeft",
     items:[
       {t:"Zwembad & kinderbad",d:"Een gedeeld zwembad met eigen kinderbad en tuin, vlak voor de deur."},
@@ -601,6 +611,8 @@ fr:{
     lead:"Un appartement de vacances lumineux et adapté aux familles, sur le sud de la Costa Blanca — votre camp de base pour les journées plage, les après-midis piscine et des excursions faciles vers trois autres régions pleines de grottes, cascades, mines et parcs à thème.",
     ctaBook:"Vérifier les disponibilités",ctaExplore:"Planifier vos sorties",
     stats:[{n:"3",l:"régions à portée d'une journée"},{n:"25 min",l:"à pied jusqu'à la plage"},{n:"24",l:"activités en famille répertoriées"}]},
+  weather:{title:"Cabo Roig en ce moment",live:"En direct",loading:"Chargement des conditions…",unavailable:"La météo en direct se charge lors de la consultation du site en ligne.",cloud:"Nébulosité",rain:"Pluie",seaTemp:"Eau de mer",
+    cond:{clear:"Ciel dégagé",mainlyClear:"Généralement dégagé",partlyCloudy:"Partiellement nuageux",overcast:"Couvert",fog:"Brouillard",drizzle:"Bruine légère",rain:"Pluvieux",snow:"Neige",thunderstorm:"Orage"}},
   highlights:{eyebrow:"Pourquoi les familles le choisissent",title:"Tout ce qu'il faut pour un séjour en famille",
     items:[
       {t:"Piscine & pataugeoire",d:"Une piscine collective avec sa propre pataugeoire pour enfants et un jardin, juste devant la porte."},

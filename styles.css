@@ -386,9 +386,13 @@ section{padding-block:56px;}
 .amenity span{font-size:.92rem;font-weight:600;}
 .distance-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line-soft);}
 .distance-row{
-  display:flex;justify-content:space-between;gap:14px;padding:13px 2px;border-bottom:1px solid var(--line-soft);font-size:.92rem;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 2px;border-bottom:1px solid var(--line-soft);font-size:.92rem;
 }
 .distance-row b{font-weight:700;color:var(--sea-deep);font-variant-numeric:tabular-nums;white-space:nowrap;}
+a.distance-row{color:var(--ink);text-decoration:none;cursor:pointer;transition:background .15s ease,padding-inline .15s ease;border-radius:var(--radius-s);}
+a.distance-row:hover{background:color-mix(in srgb, var(--sea-bright) 10%, transparent);padding-inline:10px;margin-inline:-10px;}
+a.distance-row .distance-row-label{display:flex;align-items:center;gap:8px;}
+a.distance-row .distance-row-label svg{width:15px;height:15px;color:var(--sea-bright);flex:none;}
 
 .transport-cta{
   margin-top:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
@@ -435,6 +439,95 @@ section{padding-block:56px;}
 .route-map .pin-label{font-size:11px;font-weight:700;fill:var(--ink);font-family:var(--font-body);}
 .route-map .pin-sub{font-size:9.5px;fill:var(--ink-soft);font-family:var(--font-body);}
 .route-map .route-badge-text{font-size:10.5px;font-weight:700;fill:var(--sea-deep);font-family:var(--font-body);}
+.route-map-embed{
+  position:relative;width:100%;aspect-ratio:16/10;margin-top:6px;
+  border-radius:var(--radius-m);overflow:hidden;border:1px solid var(--line-soft);background:var(--line-soft);
+}
+.route-map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;}
+.route-map-caption{margin-top:10px;font-size:.82rem;font-weight:700;color:var(--sea-deep);font-variant-numeric:tabular-nums;}
+
+/* ---------- weather hologram ---------- */
+.weather-holo{
+  position:relative;overflow:hidden;border-radius:var(--radius-l);
+  padding:26px clamp(18px,4vw,32px);
+  background:
+    radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--sea-bright) 22%, transparent), transparent 60%),
+    radial-gradient(120% 140% at 100% 100%, color-mix(in srgb, var(--sun-bright) 16%, transparent), transparent 55%),
+    linear-gradient(160deg, var(--sea-deep), #06282f 92%);
+  color:#eefaf9;
+  border:1px solid color-mix(in srgb, var(--sea-bright) 45%, transparent);
+  box-shadow:0 0 0 1px color-mix(in srgb, var(--sea-bright) 18%, transparent) inset, 0 24px 60px -28px rgba(0,0,0,.55);
+}
+/* hologram floating over the hero photo */
+.hero-weather{position:absolute;top:16px;left:0;right:0;z-index:3;display:flex;justify-content:flex-end;pointer-events:none;}
+.hero-weather .weather-holo{
+  pointer-events:auto;width:100%;max-width:560px;padding:14px 18px;border-radius:var(--radius-m);
+  background:
+    linear-gradient(160deg, rgba(11,79,97,.55), rgba(6,40,47,.62)),
+    radial-gradient(120% 140% at 0% 0%, rgba(31,168,196,.28), transparent 60%);
+  -webkit-backdrop-filter:blur(10px) saturate(1.2);backdrop-filter:blur(10px) saturate(1.2);
+  border:1px solid rgba(121,216,238,.5);
+  box-shadow:0 0 28px -6px rgba(31,168,196,.55), 0 0 0 1px rgba(121,216,238,.14) inset;
+  animation:holoFloat 6s ease-in-out infinite;
+}
+@keyframes holoFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+.hero-weather .weather-holo-head{margin-bottom:10px;}
+.hero-weather .weather-holo-title{font-size:.9rem;}
+.hero-weather .weather-holo-body{gap:12px 18px;}
+.hero-weather .weather-holo-icon svg{width:34px;height:34px;}
+.hero-weather .weather-holo-temp{font-size:1.8rem;}
+.hero-weather .weather-holo-stats{grid-template-columns:repeat(2,minmax(90px,1fr));gap:8px 16px;flex:1 1 200px;}
+@media (min-width:640px){.hero-weather .weather-holo-stats{grid-template-columns:repeat(4,minmax(70px,1fr));}.hero-weather{top:22px;}}
+.hero-weather .weather-holo-stat{flex-direction:row;flex-wrap:wrap;align-items:center;gap:2px 6px;}
+@media (min-width:640px){.hero-weather .weather-holo-stat{flex-direction:column;align-items:flex-start;}}
+.hero-weather .weather-holo-stat-val{font-size:.95rem;}
+.hero-weather .weather-holo-note{margin-top:8px;font-size:.7rem;}
+@media (max-width:639px){.hero-weather .weather-holo-note{display:none!important;}}
+@media (prefers-reduced-motion: reduce){.hero-weather .weather-holo{animation:none;}}
+.weather-holo-scan{
+  position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0px, rgba(255,255,255,.035) 1px, transparent 1px, transparent 3px);
+  mix-blend-mode:overlay;
+}
+.weather-holo-head{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px;}
+.weather-holo-title{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:700;font-size:1.05rem;letter-spacing:.01em;}
+.weather-holo-title svg{width:19px;height:19px;color:var(--sun-bright);flex:none;}
+.weather-holo-live{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9fe8d8;opacity:.9;}
+.weather-holo-dot{width:7px;height:7px;border-radius:50%;background:#4be3a6;box-shadow:0 0 0 0 rgba(75,227,166,.6);animation:weatherPulse 2.1s ease-out infinite;}
+@keyframes weatherPulse{
+  0%{box-shadow:0 0 0 0 rgba(75,227,166,.55);}
+  70%{box-shadow:0 0 0 8px rgba(75,227,166,0);}
+  100%{box-shadow:0 0 0 0 rgba(75,227,166,0);}
+}
+.weather-holo-body{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:22px 28px;}
+.weather-holo-main{display:flex;align-items:center;gap:14px;flex:none;}
+.weather-holo-icon{display:flex;color:var(--sun-bright);filter:drop-shadow(0 0 10px color-mix(in srgb, var(--sun-bright) 55%, transparent));}
+.weather-holo-icon svg{width:46px;height:46px;}
+.weather-holo-temp-wrap{display:flex;flex-direction:column;gap:2px;}
+.weather-holo-temp{font-family:var(--font-display);font-size:clamp(2.1rem,5vw,2.6rem);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
+.weather-holo-cond{font-size:.86rem;color:#bfe9e2;opacity:.9;}
+.weather-holo-stats{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:12px 22px;flex:1 1 260px;min-width:0;}
+@media (min-width:640px){.weather-holo-stats{grid-template-columns:repeat(4,minmax(100px,1fr));}}
+.weather-holo-stat{display:flex;flex-direction:column;gap:4px;min-width:0;}
+.weather-holo-stat .icon{color:var(--sea-bright);display:flex;}
+.weather-holo-stat .icon svg{width:17px;height:17px;}
+.weather-holo-stat-label{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#9bc7c0;opacity:.85;}
+.weather-holo-stat-val{font-size:1.05rem;font-weight:700;font-variant-numeric:tabular-nums;color:#f3fbfa;}
+.weather-holo-clock .weather-holo-stat-val{font-size:1rem;}
+.weather-holo-note{position:relative;display:none;margin:16px 0 0;font-size:.78rem;color:#bfe9e2;opacity:.85;}
+.weather-holo.is-unavailable .weather-holo-note{display:block;}
+.weather-holo.is-unavailable .weather-holo-temp,
+.weather-holo.is-unavailable .weather-holo-cond,
+.weather-holo.is-unavailable .weather-holo-stat-val{opacity:.5;}
+.weather-holo.is-loading .weather-holo-temp,
+.weather-holo.is-loading .weather-holo-cloud,
+.weather-holo.is-loading .weather-holo-rain{opacity:.55;}
+.weather-holo.is-loading .weather-holo-icon{animation:weatherSpin 1.6s linear infinite;}
+@keyframes weatherSpin{to{transform:rotate(360deg);}}
+.weather-holo.is-live .weather-holo-icon{animation:none;}
+@media (prefers-reduced-motion: reduce){
+  .weather-holo-dot, .weather-holo.is-loading .weather-holo-icon{animation:none;}
+}
 
 .restaurant-grid{display:grid;grid-template-columns:1fr;gap:14px;}
 @media (min-width:640px){.restaurant-grid{grid-template-columns:repeat(2,1fr);}}
@@ -761,3 +854,20 @@ section{padding-block:56px;}
   #view{animation:none;}
   .reveal,.reveal-stagger>*{opacity:1;transform:none;transition:none;}
 }
+
+/* keep hero text clear of the floating weather hologram */
+.hero-inner{padding-top:210px;}
+@media (min-width:640px){.hero-inner{padding-top:190px;}}
+.hero-weather .weather-holo-stat-val, .hero-weather .weather-holo-stat-label{white-space:nowrap;}
+@media (min-width:640px){.hero-weather .weather-holo{max-width:620px;}.hero-weather .weather-holo-stats{grid-template-columns:repeat(4,auto);justify-content:space-between;}}
+
+/* frameless hologram: floating info only, no card */
+.hero-weather .weather-holo{
+  background:none;border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;
+  border-radius:0;padding:0;overflow:visible;
+  text-shadow:0 0 12px rgba(6,40,47,.85), 0 1px 3px rgba(0,0,0,.6), 0 0 22px rgba(121,216,238,.35);
+}
+.hero-weather .weather-holo-scan{display:none;}
+.hero-weather .weather-holo-icon{filter:drop-shadow(0 0 12px rgba(244,184,85,.7)) drop-shadow(0 1px 3px rgba(0,0,0,.5));}
+.hero-weather .weather-holo-stat .icon{filter:drop-shadow(0 0 6px rgba(121,216,238,.7));}
+.hero-weather .weather-holo-stat-label,.hero-weather .weather-holo-cond{color:#e6f7f5;opacity:1;}
