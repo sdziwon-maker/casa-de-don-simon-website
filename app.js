@@ -435,6 +435,49 @@ function weatherHologramHTML(){
   </div>`;
 }
 
+/* ---------- seasonal promo (date-gated) ---------- */
+const PROMO = { start:"2026-10-27", end:"2026-12-20", price:"65", license:"VT-504789-A" };
+function promoActive(){
+  let today;
+  try{ today = new Date().toLocaleDateString("en-CA", {timeZone:"Europe/Madrid"}); }
+  catch(e){ const d = new Date(); today = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+  return today >= PROMO.start && today <= PROMO.end;
+}
+function promoHTML(){
+  if(!promoActive()) return "";
+  const p = t().promo;
+  if(!p) return "";
+  return `
+  <section class="wrap promo-sec">
+    <div class="promo">
+      <div class="promo-side">
+        <img src="${APT_IMAGES.living2}" alt="" loading="lazy"/>
+        <div class="promo-price" aria-label="${esc(p.only)} €${PROMO.price} ${esc(p.per)}, ${esc(p.incl)}">
+          <div class="promo-star"></div>
+          <div class="promo-price-in">
+            <small>${esc(p.only)}</small>
+            <div class="promo-n"><sup>€</sup>${PROMO.price}</div>
+            <div class="promo-p">${esc(p.per)}</div>
+            <div class="promo-a">${esc(p.incl)}</div>
+          </div>
+        </div>
+      </div>
+      <div class="promo-main">
+        <div class="promo-ribbon">${esc(p.badge)}</div>
+        <h2>${esc(p.title)}</h2>
+        <p class="promo-sub">${esc(p.sub)}</p>
+        <ul class="promo-chips">${p.chips.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
+        <div class="promo-xmas"><b>${esc(p.xmasT)}</b> ${esc(p.xmas)}</div>
+        <div class="promo-cta">
+          <a class="btn btn-primary" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(p.wa)}" target="_blank" rel="noopener">${ICONS.chat} ${esc(p.cta)}</a>
+          <a class="btn btn-outline-light" href="${BOOKING_URL}" target="_blank" rel="noopener">${esc(p.book)}</a>
+        </div>
+        <p class="promo-fine">${esc(p.other)} · ${esc(p.lic)} ${esc(PROMO.license)}</p>
+      </div>
+    </div>
+  </section>`;
+}
+
 /* ---------- pages ---------- */
 function pageHome(){
   const u = t();
@@ -465,6 +508,8 @@ function pageHome(){
       </div>
     </div>
   </section>
+
+  ${promoHTML()}
 
   <section class="wrap hero-amenity-strip">
     <div class="amenity-chip-row">
