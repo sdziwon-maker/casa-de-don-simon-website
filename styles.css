@@ -908,3 +908,40 @@ a.distance-row .distance-row-label svg{width:15px;height:15px;color:var(--sea-br
 .promo-cta .btn{display:inline-flex;align-items:center;gap:8px;}
 .promo-cta .btn svg{width:18px;height:18px;}
 .promo-fine{font-size:.74rem;color:rgba(255,255,255,.7);}
+
+.promo-incl{font-size:.9rem;font-weight:600;color:#ffd77a;margin-top:-4px;}
+
+/* ---------- flying flyer ---------- */
+.promo-fly{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:55;width:196px;animation:flyIn 1.3s cubic-bezier(.2,.9,.25,1.15) .8s both;}
+.promo-fly.is-leaving{animation:flyOut .45s ease-in forwards;}
+@keyframes flyIn{0%{opacity:0;transform:translate(-130%,40px) rotate(-18deg) scale(.7);}60%{opacity:1;}100%{opacity:1;transform:translate(0,0) rotate(-3deg) scale(1);}}
+@keyframes flyOut{to{opacity:0;transform:translate(-130%,-30px) rotate(-14deg) scale(.7);}}
+.promo-fly-card{
+  display:flex;flex-direction:column;align-items:flex-start;gap:6px;width:100%;text-align:left;cursor:pointer;
+  font-family:var(--font-body);color:#fff;border:1px solid rgba(121,216,238,.45);border-radius:var(--radius-m);padding:14px 14px 14px;
+  background:linear-gradient(155deg,#0b4f61,#06282f 95%);
+  box-shadow:0 18px 38px -14px rgba(6,40,47,.75),0 0 22px -6px rgba(31,168,196,.5);
+  animation:flyBob 4.5s ease-in-out 2.2s infinite;transition:transform .2s ease;
+}
+.promo-fly-card:hover{transform:rotate(0deg) scale(1.04);}
+.promo-fly-card:focus-visible,.promo-fly-x:focus-visible{outline:3px solid var(--sun-bright);outline-offset:3px;}
+@keyframes flyBob{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-7px) rotate(-1deg);}}
+.promo-fly-badge{align-self:flex-start;background:var(--coral);font-family:var(--font-display);font-weight:800;font-size:.58rem;letter-spacing:.07em;text-transform:uppercase;padding:5px 9px;border-radius:99px;line-height:1.2;}
+.promo-fly-title{font-family:var(--font-display);font-weight:800;font-size:1.02rem;line-height:1.1;}
+.promo-fly-price{display:flex;align-items:baseline;gap:6px;color:var(--sun-bright);}
+.promo-fly-price b{font-family:var(--font-display);font-weight:800;font-size:2.1rem;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;}
+.promo-fly-price sup{font-size:.55em;vertical-align:top;position:relative;top:.1em;}
+.promo-fly-price i{font-style:normal;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;}
+.promo-fly-incl{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;background:rgba(255,215,122,.16);color:#ffd77a;padding:3px 8px;border-radius:99px;}
+.promo-fly-x{position:absolute;top:-10px;right:-8px;z-index:2;width:28px;height:28px;border-radius:50%;border:2px solid #fff;background:#122225;color:#fff;font-size:1.05rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+@media (max-width:520px){.promo-fly{width:168px;left:10px;}.promo-fly-title{font-size:.92rem;}.promo-fly-price b{font-size:1.8rem;}}
+.promo-modal{position:fixed;inset:0;z-index:110;background:rgba(6,16,18,.82);display:flex;align-items:center;justify-content:center;padding:16px;animation:modalIn .25s ease both;}
+@keyframes modalIn{from{opacity:0;}to{opacity:1;}}
+.promo-modal-card{position:relative;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px;overflow:auto;}
+.promo-modal-card img{display:block;max-width:min(520px,100%);max-height:calc(100vh - 150px);width:auto;height:auto;border-radius:var(--radius-m);box-shadow:0 30px 70px -20px rgba(0,0,0,.7);}
+.promo-modal-close{position:absolute;top:-6px;right:-6px;z-index:2;width:38px;height:38px;border-radius:50%;border:2px solid #fff;background:#122225;color:#fff;font-size:1.4rem;line-height:1;cursor:pointer;}
+.promo-modal-close:focus-visible{outline:3px solid var(--sun-bright);outline-offset:2px;}
+.promo-modal-cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.promo-modal-cta .btn{display:inline-flex;align-items:center;gap:8px;}
+.promo-modal-cta .btn svg{width:18px;height:18px;}
+@media (prefers-reduced-motion:reduce){.promo-fly,.promo-fly-card,.promo-modal{animation:none!important;}.promo-fly{opacity:1;transform:rotate(-3deg);}}

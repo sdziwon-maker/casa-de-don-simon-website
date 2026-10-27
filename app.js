@@ -466,6 +466,7 @@ function promoHTML(){
         <div class="promo-ribbon">${esc(p.badge)}</div>
         <h2>${esc(p.title)}</h2>
         <p class="promo-sub">${esc(p.sub)}</p>
+        <p class="promo-incl">${esc(p.incl2)}</p>
         <ul class="promo-chips">${p.chips.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
         <div class="promo-xmas"><b>${esc(p.xmasT)}</b> ${esc(p.xmas)}</div>
         <div class="promo-cta">
@@ -476,6 +477,65 @@ function promoHTML(){
       </div>
     </div>
   </section>`;
+}
+
+/* ---------- flying flyer (floating promo, date-gated) ---------- */
+function promoFlyDismissed(){ try{ return sessionStorage.getItem("cds_fly_closed") === "1"; }catch(e){ return false; } }
+function closePromoFly(){
+  const el = document.getElementById("promoFly");
+  if(el){ el.classList.add("is-leaving"); setTimeout(() => el.remove(), 450); }
+  try{ sessionStorage.setItem("cds_fly_closed", "1"); }catch(e){}
+}
+function closePromoModal(){
+  const m = document.getElementById("promoModal");
+  if(m) m.remove();
+  document.removeEventListener("keydown", promoModalKey);
+}
+function promoModalKey(e){ if(e.key === "Escape") closePromoModal(); }
+function openPromoModal(){
+  if(!promoActive() || document.getElementById("promoModal")) return;
+  const p = t().promo;
+  const m = document.createElement("div");
+  m.id = "promoModal";
+  m.className = "promo-modal";
+  m.setAttribute("role", "dialog");
+  m.setAttribute("aria-modal", "true");
+  m.setAttribute("aria-label", p.title);
+  m.innerHTML = `
+    <div class="promo-modal-card">
+      <button class="promo-modal-close" type="button" aria-label="${esc(p.close)}">&times;</button>
+      <img src="flyer-promo.jpg" alt="${esc(p.title)} — €${PROMO.price} ${esc(p.per)}"/>
+      <div class="promo-modal-cta">
+        <a class="btn btn-primary" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(p.wa)}" target="_blank" rel="noopener">${ICONS.chat} ${esc(p.cta)}</a>
+        <a class="btn btn-outline-light" href="${BOOKING_URL}" target="_blank" rel="noopener">${esc(p.book)}</a>
+      </div>
+    </div>`;
+  m.addEventListener("click", ev => { if(ev.target === m) closePromoModal(); });
+  m.querySelector(".promo-modal-close").addEventListener("click", closePromoModal);
+  document.body.appendChild(m);
+  document.addEventListener("keydown", promoModalKey);
+  m.querySelector(".promo-modal-close").focus();
+}
+function renderPromoFly(){
+  const old = document.getElementById("promoFly");
+  if(old) old.remove();
+  if(!promoActive() || promoFlyDismissed()) return;
+  const p = t().promo;
+  if(!p) return;
+  const el = document.createElement("div");
+  el.id = "promoFly";
+  el.className = "promo-fly";
+  el.innerHTML = `
+    <button class="promo-fly-x" type="button" aria-label="${esc(p.close)}">&times;</button>
+    <button class="promo-fly-card" type="button" aria-label="${esc(p.openFlyer)}">
+      <span class="promo-fly-badge">${esc(p.badge)}</span>
+      <span class="promo-fly-title">${esc(p.title)}</span>
+      <span class="promo-fly-price"><b><sup>€</sup>${PROMO.price}</b><i>${esc(p.per)}</i></span>
+      <span class="promo-fly-incl">${esc(p.incl)}</span>
+    </button>`;
+  el.querySelector(".promo-fly-x").addEventListener("click", closePromoFly);
+  el.querySelector(".promo-fly-card").addEventListener("click", openPromoModal);
+  document.body.appendChild(el);
 }
 
 /* ---------- pages ---------- */
@@ -1025,6 +1085,7 @@ function render(keepScroll){
   wireHeader();
   if(!keepScroll) window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
   initScrollFX();
+  renderPromoFly();
   if(route.page === "home"){ animateHeroStats(); initWeatherHologram(); }
   else{ if(weatherTimer){ clearInterval(weatherTimer); weatherTimer = null; } if(weatherClockTimer){ clearInterval(weatherClockTimer); weatherClockTimer = null; } }
 }
